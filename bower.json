@@ -1,0 +1,21 @@
+{
+  "name": "inip",
+  "version": "0.0.0",
+  "authors": [
+    "I-Lun Chen <ilun.chen@innolux.com>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "~1.6.0"
+  }
+}

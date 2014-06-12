@@ -1,0 +1,178 @@
+@import "compass/reset";
+
+$welcomeWidth: 140px;
+$nameWidth: 90px;
+$counterWidth: 140px;
+$infobarHeight: 40px;
+$centerFlashWidth: 760px;
+$centerFlashHeight: 450px;
+
+.csadid,
+.csadid a:link, 
+.csadid a:visited
+{
+    /*box-sizing: border-box;*/
+    cursor: pointer;
+    color:#00FFFF;
+    overflow: visible; 
+    border: 1px solid;  
+    padding: 3px;
+    /*height: 20px;*/
+    /*line-height: 25px;*/
+    
+}
+
+.info-bar-outter
+{
+    position:absolute;
+    left: 0px;
+    top: 0px;
+    width:100%;
+    margin: 0px auto;
+    height: $infobarHeight;
+    text-align:center;
+
+
+    .info-bar-inner
+    {
+
+        height: $infobarHeight;
+        font-size: 15px;
+        width: 500px;
+        margin: 0px auto;
+        
+        div.centerbox-outter
+        {
+            margin: 0px auto;
+            float: left;
+            left: 50%;
+            position: relative;  
+        }
+ 
+        div.centerbox-inner
+        {
+            float: left;
+            position: relative;
+            left: -50%;
+            height: $infobarHeight;
+            line-height: $infobarHeight;
+        }
+        .block
+        {
+            height: 100%;   
+            box-sizing: border-box;
+            float: left;
+        }  
+           
+        &:after
+        {
+            content: "";
+            clear: both;
+        }
+
+        .welcome
+        {            
+            width: $welcomeWidth;
+            color: white;
+            > * 
+            {
+                float: right;
+            }
+        }
+
+        .user
+        {
+            padding-left: 1em;
+            padding-right: 1em;       
+            text-align: center;
+            position: relative;
+        }        
+        .counter
+        {
+            width: $counterWidth;
+            color:white;
+            font-size: 12px;
+            display:inline-block;
+            > * 
+            {
+                float: left;
+            }
+        }
+
+
+    }
+}
+
+#user
+{
+    /*height: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;*/
+}
+
+#favNum
+{
+    position: absolute;
+    right: 0.5em;
+    top: 7px;
+    font-size:10px;
+    color:white;
+    margin-left: 0.1em; 
+    vertical-align: super;
+    line-height: 10px;
+    height:10px;
+}
+
+.csMain {
+
+    background-image: url('App_Themes/image/logo2.png');
+    background-repeat:no-repeat;
+    margin:0px;
+    width:100%;
+    text-align: center;
+    height:20px;
+
+    position: relative;
+
+    overflow: visible;
+}
+
+#centerFlash
+{
+
+    width: $centerFlashWidth;
+    height: $centerFlashHeight;
+    /*width: 100%;
+    height: 100%;*/
+    * 
+    {
+
+        width: $centerFlashWidth;
+        height: $centerFlashHeight;
+    }
+
+}
+
+
+.queeStyle {
+    cursor: pointer;
+    /*font-weight: bold;*/
+    background-color: white;
+    color: red;
+    /*border: 1px solid black;*/
+    line-height: 15px;
+    height: 15px;
+    margin: 0px;
+    padding: 1px;
+    vertical-align: middle;
+    font-size: 13px;
+    position: absolute;
+    overflow: hidden;
+    /*background: url(App_Themes/image/BAR2.png) repeat-x 0px 0px;*/
+    /*background-image: url('App_Themes/image/BAR2.png');*/
+    background-repeat: repeat-x;
+    left: -1000px;
+    top: -1000px;
+}

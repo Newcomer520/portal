@@ -1,0 +1,218 @@
+/* line 17, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 13, ../sass/center.scss */
+.csadid,
+.csadid a:link,
+.csadid a:visited {
+  /*box-sizing: border-box;*/
+  cursor: pointer;
+  color: #00FFFF;
+  overflow: visible;
+  border: 1px solid;
+  padding: 3px;
+  /*height: 20px;*/
+  /*line-height: 25px;*/
+}
+
+/* line 26, ../sass/center.scss */
+.info-bar-outter {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  margin: 0px auto;
+  height: 40px;
+  text-align: center;
+}
+/* line 37, ../sass/center.scss */
+.info-bar-outter .info-bar-inner {
+  height: 40px;
+  font-size: 15px;
+  width: 500px;
+  margin: 0px auto;
+}
+/* line 45, ../sass/center.scss */
+.info-bar-outter .info-bar-inner div.centerbox-outter {
+  margin: 0px auto;
+  float: left;
+  left: 50%;
+  position: relative;
+}
+/* line 53, ../sass/center.scss */
+.info-bar-outter .info-bar-inner div.centerbox-inner {
+  float: left;
+  position: relative;
+  left: -50%;
+  height: 40px;
+  line-height: 40px;
+}
+/* line 61, ../sass/center.scss */
+.info-bar-outter .info-bar-inner .block {
+  height: 100%;
+  box-sizing: border-box;
+  float: left;
+}
+/* line 68, ../sass/center.scss */
+.info-bar-outter .info-bar-inner:after {
+  content: "";
+  clear: both;
+}
+/* line 74, ../sass/center.scss */
+.info-bar-outter .info-bar-inner .welcome {
+  width: 140px;
+  color: white;
+}
+/* line 78, ../sass/center.scss */
+.info-bar-outter .info-bar-inner .welcome > * {
+  float: right;
+}
+/* line 84, ../sass/center.scss */
+.info-bar-outter .info-bar-inner .user {
+  padding-left: 1em;
+  padding-right: 1em;
+  text-align: center;
+  position: relative;
+}
+/* line 91, ../sass/center.scss */
+.info-bar-outter .info-bar-inner .counter {
+  width: 140px;
+  color: white;
+  font-size: 12px;
+  display: inline-block;
+}
+/* line 97, ../sass/center.scss */
+.info-bar-outter .info-bar-inner .counter > * {
+  float: left;
+}
+
+/* line 107, ../sass/center.scss */
+#user {
+  /*height: 20px;
+  line-height: 20px;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;*/
+}
+
+/* line 116, ../sass/center.scss */
+#favNum {
+  position: absolute;
+  right: 0.5em;
+  top: 7px;
+  font-size: 10px;
+  color: white;
+  margin-left: 0.1em;
+  vertical-align: super;
+  line-height: 10px;
+  height: 10px;
+}
+
+/* line 128, ../sass/center.scss */
+.csMain {
+  background-image: url("App_Themes/image/logo2.png");
+  background-repeat: no-repeat;
+  margin: 0px;
+  width: 100%;
+  text-align: center;
+  height: 20px;
+  position: relative;
+  overflow: visible;
+}
+
+/* line 143, ../sass/center.scss */
+#centerFlash {
+  width: 760px;
+  height: 450px;
+  /*width: 100%;
+  height: 100%;*/
+}
+/* line 150, ../sass/center.scss */
+#centerFlash * {
+  width: 760px;
+  height: 450px;
+}
+
+/* line 159, ../sass/center.scss */
+.queeStyle {
+  cursor: pointer;
+  /*font-weight: bold;*/
+  background-color: white;
+  color: red;
+  /*border: 1px solid black;*/
+  line-height: 15px;
+  height: 15px;
+  margin: 0px;
+  padding: 1px;
+  vertical-align: middle;
+  font-size: 13px;
+  position: absolute;
+  overflow: hidden;
+  /*background: url(App_Themes/image/BAR2.png) repeat-x 0px 0px;*/
+  /*background-image: url('App_Themes/image/BAR2.png');*/
+  background-repeat: repeat-x;
+  left: -1000px;
+  top: -1000px;
+}

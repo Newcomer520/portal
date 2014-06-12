@@ -1,0 +1,552 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/typography/links/link-colors";
+$fixedWidth: 980px;
+$paddingWidth: 15px;
+
+$menuWidth: ($fixedWidth - $paddingWidth * 2) / 8;
+
+$flashDivWidth: 245px;
+/*$flashDivWidth: 180px;*/
+$flashWidth: 170px;
+$flashHeight: 225px;
+$centerWidth: 760px;
+$centerHeight: 450px;
+
+$imWidgetWidth: 70px;
+$widgetHeight: 40px;
+
+.main-body,
+.container
+{
+	/*width: $fixedWidth !important;*/
+}
+
+.inip-header
+{
+	border: 1px solid silver;
+	border-bottom: none;
+	@include border-corner-radius(top, left, 5px);
+	@include border-corner-radius(top, right, 5px);
+	/*width: 100%;*/
+	/*margin-left: auto;
+	margin-right: auto;*/
+	margin-top: 10px;
+	/*background:url(../pages/App_Themes/image/Map21_Title.png);
+	@include background-size(100% 100%);*/
+	height: 50px !important;
+	vertical-align: middle;	
+	position: relative;
+
+	.bg-img
+	{
+		position:absolute;
+    	z-index:-1;
+    	top:0;
+    	left:0;
+    	width:100%; /* alternative: right:0; */
+    	height:100%; 
+	}
+}
+
+
+.set-home-icon
+{
+	/*float:left;*/	
+	width:40px;
+	height: 40px;
+    vertical-align: middle;	
+	border:0px;	
+	&:hover
+	{
+		cursor: pointer;
+	}
+}
+.vertical-align-helper
+{
+	display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#divTransLight
+{
+	position: absolute; 
+	right:193px;
+	top: 2px;
+	z-index: 10;
+
+}
+#imgVer
+{
+	position: absolute; 
+	right:161px;
+	bottom: 0px;
+	z-index: 10;
+	cursor:pointer;
+}
+#nav-collapse-1
+{
+	padding: 0px !important;
+}
+nav
+{
+	&.navbar
+	{
+		min-height: 5px !important;
+		border: none !important;
+		margin-bottom: 0px !important;
+	}
+	&.navbar-default
+	{
+		background: none !important;
+	}
+	.container-fluid
+	{
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+	}
+}
+
+ul.nav
+{
+
+	li
+	{
+		width: $menuWidth;
+		box-sizing: border-box;
+
+		div
+		{	
+			display: inline-block;
+			border-top:1px solid silver;
+			border-bottom:1px solid silver;
+			border-right: 1px solid silver;
+			height: 25px;
+			line-height: 25px;
+			text-align: center;
+			font-size: 13px;
+			font-weight: bolder;
+			width: 100%;
+			box-sizing: border-box;
+
+			a
+			{
+				@include link-colors(black,black,black,black);
+
+				&:hover
+				{
+					text-decoration: none;
+				}
+			}
+
+			&:hover
+			{
+				cursor: pointer;
+				color: white;
+				@include background(linear-gradient(top, #fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%));
+				-pie-background: linear-gradient(top, #fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%);
+				behavior: url(local/PIE.htc);
+			}
+		}	
+	}	
+
+}
+.menu-gray
+{
+	@include background(linear-gradient(#999999, #FFFFFF, #D7D7D7, #999999, #5E5E5E));
+ 
+    -pie-background: linear-gradient(top, #999999, #FFFFFF, #D7D7D7, #999999, #5E5E5E); 	
+
+    behavior: url(local/PIE.htc);
+}
+.menu-light-blue
+{
+	@include background(linear-gradient(#97EAFF, #C6F1FF, #EEFAFF, #44C7FF, #006FDD));
+ 
+    -pie-background: linear-gradient(top, #97EAFF, #C6F1FF, #EEFAFF, #44C7FF, #006FDD); 	
+
+    behavior: url(local/PIE.htc);
+}
+
+a.csVersion
+{
+	@include link-colors(white, white, white, white);
+}
+
+.center-content
+{
+	position: relative;
+	z-index: 1;	
+	text-align:center;
+	
+
+	/*for default view*/
+	/*margin-left: -1 * $flashDivWidth;
+	width: $fixedWidth - 2 * $paddingWidth;
+	background-color: #4163BE;
+	height: $centerHeight;
+	
+
+	> iframe
+	{
+		width: $centerWidth;
+		height: $centerHeight;
+	}*/
+}
+.col-side
+{
+	z-index: 3;	
+
+	.flash-block
+	{
+		height: $flashHeight;
+
+		*
+		{
+			height: $flashHeight;
+		}
+	}
+}
+.col-side-right
+{
+	/*margin-left: $flashDivWidth;*/
+	float: right !important;
+	* 
+	{
+		float: right ;	
+	}	
+}
+.more-news
+{
+	z-index: 5;
+	font-weight: bold;
+	position:absolute;
+	bottom: 0px;
+	color: blue;
+	&:visited
+	{
+		color:blue;
+	}
+}
+
+.im
+{
+	position: relative;
+	height: $widgetHeight;
+
+	img.img-bg
+	{		
+		position: absolute;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		top: 0px;
+		left: 0px;
+	}
+
+	/*i-dictionary & OSEP*/
+	.widget
+	{
+		position: absolute;
+		z-index: 1;
+		width: $imWidgetWidth;
+		height: 100%;
+		top: 0px;
+
+		*
+		{
+			height: 100%;
+			width: $imWidgetWidth;
+		}
+	}
+
+	.widget-idictionary
+	{
+		left: 0px;
+	}
+	.widget-osep
+	{
+		right: 0px;
+	}
+
+	.notice-container
+	{
+		/*width: 80%;*/
+		padding-top: 22px;
+		margin-left: auto;
+		margin-right: auto;
+		height: 20px;
+		width: 80%;
+		vertical-align: middle;	
+		/*float: left;*/
+		
+		marquee
+		{
+			width: 100%;
+			height: 20px;
+		}
+
+		.notice
+		{
+			margin-right: 150px;
+		}
+		.notice,
+		.notice a,
+		.notice a:link,
+		.notice a:hover,
+		.notice a:visited
+		{
+			color: blue;
+			font-size: 12px;
+			font-weight: bold;
+			display: inline-block;			
+			text-decoration: none;
+			span:first-child
+			{
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.version-drop-list
+{
+	position: absolute;
+	z-index: 20;
+	text-align: center;
+	overflow: hidden;
+	background-color: silver;
+	height: 100px;
+	width: 100px;
+	box-sizing: border-box;
+	border: 2px solid black;
+	display: none;
+}
+
+
+
+@media screen and (min-width: 1000px)
+{	
+	.main-body,
+	.container
+	{
+		width: $fixedWidth !important;	
+	}
+	.center-content 
+	{
+		width: $fixedWidth - 2 * $paddingWidth;
+		margin-left: -1 * $flashDivWidth /*- 1 * $paddingWidth*/;
+		/*margin-left: -50%;*/
+		background-color: #4163BE;
+		height: $centerHeight;
+		
+
+		> iframe
+		{
+			width: $centerWidth;
+			height: $centerHeight;
+		}
+	}	
+	.col-side
+	{	
+		/*width: $flashDivWidth + $paddingWidth * 2 !important;*/
+		.flash-block
+		{
+			width: $flashWidth;
+
+			* 
+			{
+				width: $flashWidth;
+			}
+		}
+	}
+	.col-side-right
+	{
+		float: right !important;
+		* 
+		{
+			float: right ;	
+		}	
+	}
+	ul.nav
+	{
+		li
+		{
+			&.last-2-menu
+			{
+				float: right;
+			}
+		}
+	}
+	.more-news
+	{
+		right:-60px;
+	}
+}
+
+@media screen and (min-width: 769px) and (max-width: 999px)
+{
+	.main-body,
+	.container
+	{
+		
+	}
+
+	#divTransLight,
+	#imgVer
+	{
+		right: 90px;
+	}
+
+	ul.nav
+	{
+		width: 100%;
+
+		li
+		{
+			width: 25%;
+		}
+	}
+
+	.center-content 
+	{
+		overflow: hidden;
+		position: relative;
+		height: $centerHeight;
+
+		> * {
+		  width: $centerWidth;
+		  position: absolute;
+		  left: 50%;
+		  top: 0;
+		  margin-left: -$centerWidth / 2;
+		  height: $centerHeight;
+		}
+	}
+
+	.col-side
+	{
+		height: $flashHeight;
+
+		.flash-block
+		{
+			float: left;
+			width:50%;
+			height: $flashHeight;
+
+			* 
+			{
+				width: 100%;
+				height: $flashHeight;
+			}
+		}
+	}
+	.more-news
+	{
+		right: $paddingWidth;
+	}
+}
+@media screen and (max-width: 768px)
+{
+	.main-body
+	{
+		/*width: 730px;*/
+		margin-left:10px;
+		margin-right:10px;
+	}
+	.inip-header *
+	{
+		/*visibility: hidden;*/
+		/*display: none;*/
+	}
+	.inip-header
+	{
+		width: 100%;		
+		background-position:center; 
+	}
+	#imgVer
+	{
+		display: none;
+	}
+	.logo-item
+	{
+		position: absolute;
+		top: 50px !important;
+		left: 0px;
+	}
+	#divTransLight
+	{
+		left: 100px;
+		top: 60px;
+	}
+
+	.navbar-header
+	{
+		margin-right: 0px !important;
+		margin-left: 0px !important;
+		border: 1px solid #8e8e8e;
+	}
+	#nav-collapse-1
+	{
+		margin-left: 0px !important;		
+		margin-right: 0px !important;		
+		&.nav-collapse
+		{
+			margin-right: 0px;
+			margin-left: 0px;
+		}
+		ul.nav
+		{
+			width: 100%;
+
+			li
+			{
+				width: 100%;
+				div
+				{
+					height: 30px;
+					border: 1px solid silver;
+				}
+			}
+		}
+	}	
+
+	.center-content
+	{
+		overflow: hidden;
+		position: relative;
+		height: $centerHeight;
+
+		> * {
+		  width: $centerWidth;
+		  position: absolute;
+		  left: 50%;
+		  top: 0;
+		  margin-left: -$centerWidth / 2;
+		  height: $centerHeight;
+		}
+	}
+	.col-side
+	{
+		height: $flashHeight;
+
+		.flash-block
+		{
+			float: left;
+			width:50%;
+			height: $flashHeight;
+
+			* 
+			{
+				width: 100%;
+				height: $flashHeight;
+			}
+		}
+	}
+	.more-news
+	{
+		bottom: 15px;
+		right: $paddingWidth;
+	}
+}

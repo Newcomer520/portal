@@ -1,0 +1,27 @@
+<div class="modal-header">
+    <h1 class="modal-title">INIP 系統公告</h1>
+</div>
+<div class="modal-body">
+    <div ng-repeat="issue in content">
+    <h2>
+        <label class="label label-info">主旨</label>
+        {{issue.TITLE}}
+    </h2>
+    <br>
+    <h2>
+        <label class="label label-info">時間</label>
+        {{issue.DATE_FROM | date: 'yyyy/MM/dd HH:mm'}}
+        至 {{issue.DATE_TO | date: 'yyyy/MM/dd HH:mm'}}
+    </h2>
+    <br>
+        <h2>
+            <label class="label label-info">說明</label>
+            <pre>
+                {{issue.ISSUE_DESC}}
+            </pre>
+        </h2>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+</div>

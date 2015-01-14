@@ -1,0 +1,13 @@
+<div class="modal-header help-desk">
+	<a href="http://misplm2.cminl.oa/jira/browse/IHELP" target="_blank">
+		<span>各廠區聯絡電話</span>
+	</a>
+	<img src="Pages/Images/close.png" ng-click="close()">
+</div>
+<div class="modal-body help-desk">
+	<section ng-repeat="desk in desks">
+		<h1>{{desk.site}}</h1>
+		<span>{{desk.tel}}</span>
+		<br>
+	</section>
+</div>

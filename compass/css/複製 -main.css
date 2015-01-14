@@ -1,0 +1,653 @@
+@charset "CP950";
+/* line 17, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/*$flashDivWidth: 180px;*/
+/* line 21, ../sass/複製 -main.scss */
+.main-body,
+.container {
+  /*width: $fixedWidth !important;*/
+}
+
+/* line 26, ../sass/複製 -main.scss */
+.inip-header {
+  border: 1px solid silver;
+  border-bottom: none;
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  /*width: 100%;*/
+  /*margin-left: auto;
+  margin-right: auto;*/
+  margin-top: 10px;
+  /*background:url(../pages/App_Themes/image/Map21_Title.png);
+  @include background-size(100% 100%);*/
+  height: 50px !important;
+  vertical-align: middle;
+  position: relative;
+}
+/* line 42, ../sass/複製 -main.scss */
+.inip-header .bg-img {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* alternative: right:0; */
+  height: 100%;
+}
+
+/* line 54, ../sass/複製 -main.scss */
+.set-home-icon {
+  /*float:left;*/
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  border: 0px;
+}
+/* line 61, ../sass/複製 -main.scss */
+.set-home-icon:hover {
+  cursor: pointer;
+}
+
+/* line 66, ../sass/複製 -main.scss */
+.vertical-align-helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+/* line 73, ../sass/複製 -main.scss */
+#divTransLight {
+  position: absolute;
+  /*right:183px;*/
+  left: 75%;
+  top: 2px;
+  z-index: 10;
+}
+
+/* line 82, ../sass/複製 -main.scss */
+.inip-version {
+  position: absolute;
+  z-index: 10;
+  left: 75%;
+  top: 35px;
+}
+
+/* line 89, ../sass/複製 -main.scss */
+#imgVer {
+  /*position: absolute; */
+  /*left: 75%;*/
+  bottom: 0px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+/* line 97, ../sass/複製 -main.scss */
+#nav-collapse-1 {
+  padding: 0px !important;
+}
+
+/* line 103, ../sass/複製 -main.scss */
+nav.navbar {
+  min-height: 5px !important;
+  border: none !important;
+  margin-bottom: 0px !important;
+}
+/* line 109, ../sass/複製 -main.scss */
+nav.navbar-default {
+  background: none !important;
+}
+/* line 113, ../sass/複製 -main.scss */
+nav .container-fluid {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+/* line 123, ../sass/複製 -main.scss */
+ul.nav li {
+  width: 118.75px;
+  box-sizing: border-box;
+}
+/* line 128, ../sass/複製 -main.scss */
+ul.nav li div {
+  display: inline-block;
+  border-top: 1px solid silver;
+  border-bottom: 1px solid silver;
+  border-right: 1px solid silver;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bolder;
+  width: 100%;
+  box-sizing: border-box;
+}
+/* line 142, ../sass/複製 -main.scss */
+ul.nav li div a {
+  color: black;
+}
+/* line 18, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+ul.nav li div a:visited {
+  color: black;
+}
+/* line 24, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+ul.nav li div a:hover {
+  color: black;
+}
+/* line 27, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+ul.nav li div a:active {
+  color: black;
+}
+/* line 146, ../sass/複製 -main.scss */
+ul.nav li div a:hover {
+  text-decoration: none;
+}
+/* line 154, ../sass/複製 -main.scss */
+ul.nav li div:hover, ul.nav li div:hover *,
+ul.nav li div *:hover {
+  cursor: pointer;
+  color: white !important;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fceabb), color-stop(50%, #fccd4d), color-stop(51%, #f8b500), color-stop(100%, #fbdf93));
+  background: -webkit-linear-gradient(top, #fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%);
+  background: -moz-linear-gradient(top, #fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%);
+  background: -o-linear-gradient(top, #fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%);
+  background: linear-gradient(top, #fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%);
+  -pie-background: linear-gradient(top, #fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%);
+  behavior: url(local/PIE.htc);
+}
+
+/* line 166, ../sass/複製 -main.scss */
+.menu-gray {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #999999), color-stop(25%, #ffffff), color-stop(50%, #d7d7d7), color-stop(75%, #999999), color-stop(100%, #5e5e5e));
+  background: -webkit-linear-gradient(#999999, #ffffff, #d7d7d7, #999999, #5e5e5e);
+  background: -moz-linear-gradient(#999999, #ffffff, #d7d7d7, #999999, #5e5e5e);
+  background: -o-linear-gradient(#999999, #ffffff, #d7d7d7, #999999, #5e5e5e);
+  background: linear-gradient(#999999, #ffffff, #d7d7d7, #999999, #5e5e5e);
+  -pie-background: linear-gradient(top, #999999, #ffffff, #d7d7d7, #999999, #5e5e5e);
+  behavior: url(local/PIE.htc);
+}
+
+/* line 174, ../sass/複製 -main.scss */
+.menu-light-blue {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #97eaff), color-stop(25%, #c6f1ff), color-stop(50%, #eefaff), color-stop(75%, #44c7ff), color-stop(100%, #006fdd));
+  background: -webkit-linear-gradient(#97eaff, #c6f1ff, #eefaff, #44c7ff, #006fdd);
+  background: -moz-linear-gradient(#97eaff, #c6f1ff, #eefaff, #44c7ff, #006fdd);
+  background: -o-linear-gradient(#97eaff, #c6f1ff, #eefaff, #44c7ff, #006fdd);
+  background: linear-gradient(#97eaff, #c6f1ff, #eefaff, #44c7ff, #006fdd);
+  -pie-background: linear-gradient(top, #97eaff, #c6f1ff, #eefaff, #44c7ff, #006fdd);
+  behavior: url(local/PIE.htc);
+}
+
+/* line 183, ../sass/複製 -main.scss */
+a.csVersion {
+  color: white;
+}
+/* line 18, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a.csVersion:visited {
+  color: white;
+}
+/* line 24, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a.csVersion:hover {
+  color: white;
+}
+/* line 27, C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a.csVersion:active {
+  color: white;
+}
+
+/* line 188, ../sass/複製 -main.scss */
+.center-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  /*for default view*/
+  	/*margin-left: -1 * $flashDivWidth;
+  	width: $fixedWidth - 2 * $paddingWidth;
+  	background-color: #4163BE;
+  	height: $centerHeight;
+  	
+  
+  	> iframe
+  	{
+  		width: $centerWidth;
+  		height: $centerHeight;
+  	}*/
+}
+
+/* line 208, ../sass/複製 -main.scss */
+.col-side {
+  z-index: 3;
+}
+/* line 212, ../sass/複製 -main.scss */
+.col-side .flash-block {
+  height: 225px;
+}
+/* line 216, ../sass/複製 -main.scss */
+.col-side .flash-block * {
+  height: 225px;
+}
+
+/* line 222, ../sass/複製 -main.scss */
+.col-side-right {
+  /*margin-left: $flashDivWidth;*/
+  float: right !important;
+}
+/* line 226, ../sass/複製 -main.scss */
+.col-side-right * {
+  float: right;
+}
+
+/* line 231, ../sass/複製 -main.scss */
+.more-news {
+  z-index: 5;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0px;
+  color: blue;
+}
+/* line 238, ../sass/複製 -main.scss */
+.more-news:visited {
+  color: blue;
+}
+
+/* line 244, ../sass/複製 -main.scss */
+.im {
+  position: relative;
+  height: 40px;
+  /*i-dictionary & OSEP*/
+}
+/* line 249, ../sass/複製 -main.scss */
+.im img.img-bg {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+/* line 260, ../sass/複製 -main.scss */
+.im .widget {
+  position: absolute;
+  z-index: 1;
+  width: 70px;
+  height: 100%;
+  top: 0px;
+}
+/* line 268, ../sass/複製 -main.scss */
+.im .widget * {
+  height: 100%;
+  width: 70px;
+}
+/* line 275, ../sass/複製 -main.scss */
+.im .widget-idictionary {
+  left: 0px;
+}
+/* line 279, ../sass/複製 -main.scss */
+.im .widget-osep {
+  right: 0px;
+}
+/* line 284, ../sass/複製 -main.scss */
+.im .notice-container {
+  /*width: 80%;*/
+  padding-top: 22px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 20px;
+  width: 80%;
+  vertical-align: middle;
+  /*float: left;*/
+}
+/* line 295, ../sass/複製 -main.scss */
+.im .notice-container marquee {
+  width: 100%;
+  height: 20px;
+}
+/* line 301, ../sass/複製 -main.scss */
+.im .notice-container .notice {
+  margin-right: 150px;
+}
+/* line 308, ../sass/複製 -main.scss */
+.im .notice-container .notice-emergency a,
+.im .notice-container .notice-emergency a:link,
+.im .notice-container .notice-emergency a:hover,
+.im .notice-container .notice-emergency a:visited {
+  color: red !important;
+}
+/* line 316, ../sass/複製 -main.scss */
+.im .notice-container .notice,
+.im .notice-container .notice a,
+.im .notice-container .notice a:link,
+.im .notice-container .notice a:hover,
+.im .notice-container .notice a:visited {
+  color: blue;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+  text-decoration: none;
+}
+/* line 323, ../sass/複製 -main.scss */
+.im .notice-container .notice span:first-child,
+.im .notice-container .notice a span:first-child,
+.im .notice-container .notice a:link span:first-child,
+.im .notice-container .notice a:hover span:first-child,
+.im .notice-container .notice a:visited span:first-child {
+  cursor: pointer;
+}
+
+/* line 331, ../sass/複製 -main.scss */
+.version-drop-list {
+  position: absolute;
+  z-index: 20;
+  text-align: center;
+  overflow: hidden;
+  background-color: silver;
+  height: 100px;
+  width: 100px;
+  box-sizing: border-box;
+  border: 2px solid black;
+  display: none;
+  padding: 2px;
+}
+
+/* line 346, ../sass/複製 -main.scss */
+.modal-dialog {
+  margin-top: 10% !important;
+}
+
+/* line 350, ../sass/複製 -main.scss */
+.modal-header {
+  color: white;
+  background-color: #428bca;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+/* line 357, ../sass/複製 -main.scss */
+.modal-body {
+  word-break: break-all;
+}
+/* line 360, ../sass/複製 -main.scss */
+.modal-body .label-info {
+  width: 80px;
+  display: inline-block !important;
+}
+
+@media screen and (min-width: 980px) {
+  /* line 371, ../sass/複製 -main.scss */
+  .main-body,
+  .container {
+    width: 980px !important;
+  }
+
+  /* line 375, ../sass/複製 -main.scss */
+  .center-content {
+    width: 950px;
+    margin-left: -245px;
+    /*margin-left: -50%;*/
+    background-color: #4163BE;
+    height: 450px;
+  }
+  /* line 384, ../sass/複製 -main.scss */
+  .center-content > iframe {
+    width: 760px;
+    height: 450px;
+  }
+
+  /* line 390, ../sass/複製 -main.scss */
+  .col-side {
+    /*width: $flashDivWidth + $paddingWidth * 2 !important;*/
+  }
+  /* line 393, ../sass/複製 -main.scss */
+  .col-side .flash-block {
+    width: 170px;
+  }
+  /* line 397, ../sass/複製 -main.scss */
+  .col-side .flash-block * {
+    width: 170px;
+  }
+
+  /* line 403, ../sass/複製 -main.scss */
+  .col-side-right {
+    float: right !important;
+  }
+  /* line 406, ../sass/複製 -main.scss */
+  .col-side-right * {
+    float: right;
+  }
+
+  /* line 415, ../sass/複製 -main.scss */
+  ul.nav li.last-2-menu {
+    float: right;
+  }
+
+  /* line 421, ../sass/複製 -main.scss */
+  .more-news {
+    right: -60px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 979px) {
+  /* line 436, ../sass/複製 -main.scss */
+  #divTransLight,
+  #imgVer {
+    right: 90px;
+  }
+
+  /* line 441, ../sass/複製 -main.scss */
+  ul.nav {
+    width: 100%;
+  }
+  /* line 445, ../sass/複製 -main.scss */
+  ul.nav li {
+    width: 25%;
+  }
+
+  /* line 451, ../sass/複製 -main.scss */
+  .center-content {
+    overflow: hidden;
+    position: relative;
+    height: 450px;
+  }
+  /* line 456, ../sass/複製 -main.scss */
+  .center-content > * {
+    width: 760px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -380px;
+    height: 450px;
+  }
+
+  /* line 467, ../sass/複製 -main.scss */
+  .col-side {
+    height: 225px;
+  }
+  /* line 471, ../sass/複製 -main.scss */
+  .col-side .flash-block {
+    float: left;
+    width: 50%;
+    height: 225px;
+  }
+  /* line 477, ../sass/複製 -main.scss */
+  .col-side .flash-block * {
+    width: 100%;
+    height: 225px;
+  }
+
+  /* line 484, ../sass/複製 -main.scss */
+  .more-news {
+    right: 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 491, ../sass/複製 -main.scss */
+  .main-body {
+    /*width: 730px;*/
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  /* line 497, ../sass/複製 -main.scss */
+  .inip-header * {
+    /*visibility: hidden;*/
+    /*display: none;*/
+  }
+
+  /* line 502, ../sass/複製 -main.scss */
+  .inip-header {
+    width: 100%;
+    background-position: center;
+  }
+
+  /* line 507, ../sass/複製 -main.scss */
+  #imgVer {
+    display: none;
+  }
+
+  /* line 511, ../sass/複製 -main.scss */
+  .logo-item {
+    position: absolute;
+    top: 50px !important;
+    left: 0px;
+  }
+
+  /* line 517, ../sass/複製 -main.scss */
+  #divTransLight {
+    left: 100px;
+    top: 60px;
+  }
+
+  /* line 523, ../sass/複製 -main.scss */
+  .navbar-header {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    border: 1px solid #8e8e8e;
+  }
+
+  /* line 529, ../sass/複製 -main.scss */
+  #nav-collapse-1 {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+  /* line 533, ../sass/複製 -main.scss */
+  #nav-collapse-1.nav-collapse {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  /* line 538, ../sass/複製 -main.scss */
+  #nav-collapse-1 ul.nav {
+    width: 100%;
+  }
+  /* line 542, ../sass/複製 -main.scss */
+  #nav-collapse-1 ul.nav li {
+    width: 100%;
+  }
+  /* line 545, ../sass/複製 -main.scss */
+  #nav-collapse-1 ul.nav li div {
+    height: 30px;
+    border: 1px solid silver;
+  }
+
+  /* line 554, ../sass/複製 -main.scss */
+  .center-content {
+    overflow: hidden;
+    position: relative;
+    height: 450px;
+  }
+  /* line 559, ../sass/複製 -main.scss */
+  .center-content > * {
+    width: 760px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -380px;
+    height: 450px;
+  }
+
+  /* line 569, ../sass/複製 -main.scss */
+  .col-side {
+    height: 225px;
+  }
+  /* line 573, ../sass/複製 -main.scss */
+  .col-side .flash-block {
+    float: left;
+    width: 50%;
+    height: 225px;
+  }
+  /* line 579, ../sass/複製 -main.scss */
+  .col-side .flash-block * {
+    width: 100%;
+    height: 225px;
+  }
+
+  /* line 586, ../sass/複製 -main.scss */
+  .more-news {
+    bottom: 15px;
+    right: 15px;
+  }
+}

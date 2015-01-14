@@ -1,0 +1,14 @@
+/* line 3, ../compass/sass/ie.scss */
+.inip-header {
+  behavior: url(local/PIE.htc);
+}
+
+/* line 8, ../compass/sass/ie.scss */
+.modal-content {
+  behavior: url(local/PIE.htc);
+  /*for IE*/
+}
+/* line 13, ../compass/sass/ie.scss */
+.modal-content .modal-footer {
+  position: relative;
+}

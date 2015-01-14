@@ -1,0 +1,797 @@
+/* line 5, C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/*$flashDivWidth: 180px;*/
+/* line 20, ../sass/main.scss */
+.main-body,
+.container {
+  /*comment*/
+  /*width: $fixedWidth !important;*/
+}
+
+/* line 27, ../sass/main.scss */
+.inip-header {
+  border: 1px solid silver;
+  border-bottom: none;
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  /*width: 100%;*/
+  /*margin-left: auto;
+  margin-right: auto;*/
+  margin-top: 5px;
+  /*background:url(../pages/App_Themes/image/Map21_Title.png);
+  @include background-size(100% 100%);*/
+  height: 50px !important;
+  vertical-align: middle;
+  position: relative;
+}
+/* line 43, ../sass/main.scss */
+.inip-header .bg-img {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* alternative: right:0; */
+  height: 100%;
+}
+
+/* line 55, ../sass/main.scss */
+.set-home-icon {
+  /*float:left;*/
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  border: 0px;
+}
+/* line 62, ../sass/main.scss */
+.set-home-icon:hover {
+  cursor: pointer;
+}
+
+/* line 67, ../sass/main.scss */
+.vertical-align-helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+/* line 74, ../sass/main.scss */
+#divTransLight {
+  position: absolute;
+  /*right:183px;*/
+  left: 75%;
+  top: 2px;
+  z-index: 10;
+}
+
+/* line 83, ../sass/main.scss */
+.inip-version {
+  position: absolute;
+  z-index: 10;
+  left: 75%;
+  top: 35px;
+}
+
+/* line 90, ../sass/main.scss */
+#imgVer {
+  /*position: absolute; */
+  /*left: 75%;*/
+  bottom: 0px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+/* line 98, ../sass/main.scss */
+.mapp {
+  border: none;
+  position: absolute;
+  z-index: 10;
+  top: 1px;
+  right: 88px;
+  height: 49px;
+  width: 54px;
+}
+
+/* line 109, ../sass/main.scss */
+.inx-tube {
+  position: absolute;
+  width: 58px;
+  height: 50px;
+}
+
+/* line 115, ../sass/main.scss */
+#nav-collapse-1 {
+  padding: 0px !important;
+}
+
+/* line 121, ../sass/main.scss */
+nav.navbar {
+  min-height: 5px !important;
+  border: none !important;
+  margin-bottom: 0px !important;
+}
+/* line 127, ../sass/main.scss */
+nav.navbar-default {
+  background: none !important;
+}
+/* line 131, ../sass/main.scss */
+nav .container-fluid {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+/* line 138, ../sass/main.scss */
+ul.nav {
+  float: left !important;
+  margin: 0px !important;
+}
+/* line 144, ../sass/main.scss */
+ul.nav li:first-child div {
+  border-left: 1px solid silver;
+}
+/* line 149, ../sass/main.scss */
+ul.nav li {
+  width: 121.25px;
+  box-sizing: border-box;
+  float: left !important;
+}
+/* line 155, ../sass/main.scss */
+ul.nav li div {
+  display: inline-block;
+  border-top: 1px solid silver;
+  border-bottom: 1px solid gray;
+  border-right: 1px solid silver;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bolder;
+  width: 100%;
+  box-sizing: border-box;
+}
+/* line 169, ../sass/main.scss */
+ul.nav li div a {
+  color: black;
+}
+/* line 18, C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/typography/links/_link-colors.scss */
+ul.nav li div a:visited {
+  color: black;
+}
+/* line 24, C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/typography/links/_link-colors.scss */
+ul.nav li div a:hover {
+  color: black;
+}
+/* line 27, C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/typography/links/_link-colors.scss */
+ul.nav li div a:active {
+  color: black;
+}
+/* line 173, ../sass/main.scss */
+ul.nav li div a:hover {
+  text-decoration: none;
+}
+/* line 179, ../sass/main.scss */
+ul.nav li div:hover, ul.nav li div:hover *,
+ul.nav li div *:hover {
+  cursor: pointer;
+  color: white !important;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZjZWFiYiIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjZmNjZDRkIi8+PHN0b3Agb2Zmc2V0PSI1MSUiIHN0b3AtY29sb3I9IiNmOGI1MDAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmYmRmOTMiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fceabb), color-stop(50%, #fccd4d), color-stop(51%, #f8b500), color-stop(100%, #fbdf93));
+  background: -moz-linear-gradient(#fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%);
+  background: -webkit-linear-gradient(#fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%);
+  background: linear-gradient(#fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%);
+  -pie-background: linear-gradient(#fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%);
+  behavior: url(local/PIE.htc);
+}
+
+/* line 193, ../sass/main.scss */
+.menu-gray {
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzk5OTk5OSIvPjxzdG9wIG9mZnNldD0iMjUlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIi8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNkN2Q3ZDciLz48c3RvcCBvZmZzZXQ9Ijc1JSIgc3RvcC1jb2xvcj0iIzk5OTk5OSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzVlNWU1ZSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #999999), color-stop(25%, #ffffff), color-stop(50%, #d7d7d7), color-stop(75%, #999999), color-stop(100%, #5e5e5e));
+  background: -moz-linear-gradient(#999999, #ffffff, #d7d7d7, #999999, #5e5e5e);
+  background: -webkit-linear-gradient(#999999, #ffffff, #d7d7d7, #999999, #5e5e5e);
+  background: linear-gradient(#999999, #ffffff, #d7d7d7, #999999, #5e5e5e);
+  -pie-background: linear-gradient(#999999, #ffffff, #d7d7d7, #999999, #5e5e5e);
+  behavior: url(local/PIE.htc);
+}
+
+/* line 201, ../sass/main.scss */
+.menu-light-blue {
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzk3ZWFmZiIvPjxzdG9wIG9mZnNldD0iMjUlIiBzdG9wLWNvbG9yPSIjYzZmMWZmIi8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNlZWZhZmYiLz48c3RvcCBvZmZzZXQ9Ijc1JSIgc3RvcC1jb2xvcj0iIzQ0YzdmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwNmZkZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #97eaff), color-stop(25%, #c6f1ff), color-stop(50%, #eefaff), color-stop(75%, #44c7ff), color-stop(100%, #006fdd));
+  background: -moz-linear-gradient(#97eaff, #c6f1ff, #eefaff, #44c7ff, #006fdd);
+  background: -webkit-linear-gradient(#97eaff, #c6f1ff, #eefaff, #44c7ff, #006fdd);
+  background: linear-gradient(#97eaff, #c6f1ff, #eefaff, #44c7ff, #006fdd);
+  -pie-background: linear-gradient(#97eaff, #c6f1ff, #eefaff, #44c7ff, #006fdd);
+  behavior: url(local/PIE.htc);
+}
+
+/* line 209, ../sass/main.scss */
+.menu-gray,
+.menu-light-blue {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* line 215, ../sass/main.scss */
+a.csVersion {
+  color: white;
+}
+/* line 18, C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/typography/links/_link-colors.scss */
+a.csVersion:visited {
+  color: white;
+}
+/* line 24, C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/typography/links/_link-colors.scss */
+a.csVersion:hover {
+  color: white;
+}
+/* line 27, C:/Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/typography/links/_link-colors.scss */
+a.csVersion:active {
+  color: white;
+}
+
+/* line 220, ../sass/main.scss */
+.center-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  /*for default view*/
+  	/*margin-left: -1 * $flashDivWidth;
+  	width: $fixedWidth - 2 * $paddingWidth;
+  	background-color: #4163BE;
+  	height: $centerHeight;
+  	
+  
+  	> iframe
+  	{
+  		width: $centerWidth;
+  		height: $centerHeight;
+  	}*/
+}
+
+/* line 240, ../sass/main.scss */
+.col-side {
+  z-index: 3;
+}
+/* line 244, ../sass/main.scss */
+.col-side .flash-block {
+  height: 225px;
+}
+/* line 248, ../sass/main.scss */
+.col-side .flash-block * {
+  height: 225px;
+}
+
+/* line 254, ../sass/main.scss */
+.col-side-right {
+  /*margin-left: $flashDivWidth;*/
+  float: right !important;
+}
+/* line 258, ../sass/main.scss */
+.col-side-right * {
+  float: right;
+}
+
+/* line 263, ../sass/main.scss */
+.more-news {
+  z-index: 5;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0px;
+  color: blue;
+}
+/* line 270, ../sass/main.scss */
+.more-news:visited {
+  color: blue;
+}
+
+/* line 276, ../sass/main.scss */
+.im {
+  position: relative;
+  height: 40px;
+  /*i-dictionary & OSEP*/
+}
+/* line 281, ../sass/main.scss */
+.im img.img-bg {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+/* line 292, ../sass/main.scss */
+.im .widget {
+  position: absolute;
+  z-index: 1;
+  width: 70px;
+  height: 100%;
+  top: 0px;
+}
+/* line 300, ../sass/main.scss */
+.im .widget * {
+  height: 100%;
+  width: 70px;
+}
+/* line 307, ../sass/main.scss */
+.im .widget-idictionary {
+  left: 0px;
+}
+/* line 311, ../sass/main.scss */
+.im .widget-osep {
+  right: 0px;
+}
+/* line 315, ../sass/main.scss */
+.im .widget-TS16949 {
+  right: 70px;
+  padding-top: 5px;
+}
+/* line 319, ../sass/main.scss */
+.im .widget-TS16949 button {
+  height: 30px;
+  white-space: normal;
+  font-size: 11px;
+  line-height: 11px;
+}
+/* line 327, ../sass/main.scss */
+.im .notice-container {
+  padding-top: 22px;
+  /*margin-left: auto;
+  margin-right: auto;*/
+  margin-left: 100px;
+  margin-right: 150px;
+  height: 20px;
+  /*width: 70%;*/
+  vertical-align: middle;
+  /*float: left;*/
+}
+/* line 339, ../sass/main.scss */
+.im .notice-container marquee {
+  width: 100%;
+  height: 20px;
+}
+/* line 345, ../sass/main.scss */
+.im .notice-container .notice {
+  margin-right: 150px;
+}
+/* line 349, ../sass/main.scss */
+.im .notice-container .notice-emergency a,
+.im .notice-container .notice-emergency a:link,
+.im .notice-container .notice-emergency a:hover,
+.im .notice-container .notice-emergency a:visited {
+  color: red !important;
+}
+/* line 356, ../sass/main.scss */
+.im .notice-container .notice,
+.im .notice-container .notice a,
+.im .notice-container .notice a:link,
+.im .notice-container .notice a:hover,
+.im .notice-container .notice a:visited {
+  color: blue;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+  text-decoration: none;
+}
+/* line 367, ../sass/main.scss */
+.im .notice-container .notice span:first-child,
+.im .notice-container .notice a span:first-child,
+.im .notice-container .notice a:link span:first-child,
+.im .notice-container .notice a:hover span:first-child,
+.im .notice-container .notice a:visited span:first-child {
+  cursor: pointer;
+}
+
+/* line 375, ../sass/main.scss */
+.version-drop-list {
+  position: absolute;
+  z-index: 20;
+  text-align: center;
+  overflow: hidden;
+  background-color: silver;
+  height: 100px;
+  width: 100px;
+  box-sizing: border-box;
+  border: 2px solid black;
+  display: none;
+  padding: 2px;
+}
+
+/* line 390, ../sass/main.scss */
+.modal-dialog {
+  margin-top: 10% !important;
+}
+
+/* line 394, ../sass/main.scss */
+.modal-header {
+  color: white;
+  background-color: #428bca;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+/* line 400, ../sass/main.scss */
+.modal-header.help-desk {
+  padding: 3px;
+  height: 30px;
+}
+/* line 404, ../sass/main.scss */
+.modal-header.help-desk a,
+.modal-header.help-desk a:visited
+a:hover {
+  text-decoration: none;
+  color: white;
+  line-height: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+/* line 414, ../sass/main.scss */
+.modal-header.help-desk img {
+  float: right;
+  cursor: pointer;
+}
+
+/* line 421, ../sass/main.scss */
+.modal-body {
+  word-break: break-all;
+}
+/* line 424, ../sass/main.scss */
+.modal-body .label-info {
+  width: 80px;
+  display: inline-block !important;
+}
+/* line 431, ../sass/main.scss */
+.modal-body.help-desk h1 {
+  font-weight: bold;
+  color: blue;
+  margin-top: 10px;
+}
+/* line 438, ../sass/main.scss */
+.modal-body.help-desk .issue-tracking {
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+}
+
+/* line 447, ../sass/main.scss */
+.footer-oos {
+  text-align: center;
+}
+/* line 450, ../sass/main.scss */
+.footer-oos > div {
+  float: left;
+}
+/* line 454, ../sass/main.scss */
+.footer-oos .blocking {
+  padding-top: 1px;
+  height: 10px;
+  width: 170px;
+  text-align: left;
+}
+/* line 461, ../sass/main.scss */
+.footer-oos .blocking img.help-desk,
+.footer-oos .blocking div.help-desk,
+.footer-oos .blocking span.help-desk {
+  width: 55px;
+  height: 18px;
+  color: white;
+  padding: 3px;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y5NDA5NyIvPjxzdG9wIG9mZnNldD0iNDklIiBzdG9wLWNvbG9yPSIjZjkwMDMxIi8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNmYzAyMTMiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmYzY3N2QiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f94097), color-stop(49%, #f90031), color-stop(50%, #fc0213), color-stop(100%, #fc677d));
+  background: -moz-linear-gradient(#f94097 0%, #f90031 49%, #fc0213 50%, #fc677d 100%);
+  background: -webkit-linear-gradient(#f94097 0%, #f90031 49%, #fc0213 50%, #fc677d 100%);
+  background: linear-gradient(#f94097 0%, #f90031 49%, #fc0213 50%, #fc677d 100%);
+  -pie-background: linear-gradient(#f94097 0%, #f90031 49%, #fc0213 50%, #fc677d 100%);
+}
+/* line 478, ../sass/main.scss */
+.footer-oos .oos-container {
+  width: 630px;
+  margin-top: 2px;
+  color: #4f432b;
+  font-size: 12px;
+  position: relative;
+}
+/* line 486, ../sass/main.scss */
+.footer-oos .oos {
+  margin-left: 5px;
+  font-size: 0px;
+  font-weight: bold;
+}
+/* line 493, ../sass/main.scss */
+.footer-oos .leading-letter {
+  font-size: 14px;
+  color: red;
+}
+/* line 498, ../sass/main.scss */
+.footer-oos .letters {
+  font-size: 12px;
+}
+
+/* line 505, ../sass/main.scss */
+.main-body,
+.container {
+  width: 1000px !important;
+}
+
+/* line 510, ../sass/main.scss */
+.center-content {
+  width: 970px;
+  margin-left: -250px;
+  /*margin-left: -50%;*/
+  background-color: #4163BE;
+  height: 450px;
+}
+/* line 519, ../sass/main.scss */
+.center-content > iframe {
+  width: 760px;
+  height: 450px;
+}
+
+/* line 525, ../sass/main.scss */
+.col-side {
+  /*width: $flashDivWidth + $paddingWidth * 2 !important;*/
+}
+/* line 528, ../sass/main.scss */
+.col-side .flash-block {
+  width: 170px;
+}
+/* line 532, ../sass/main.scss */
+.col-side .flash-block * {
+  width: 170px;
+}
+
+/* line 538, ../sass/main.scss */
+.col-side-right {
+  float: right !important;
+}
+/* line 541, ../sass/main.scss */
+.col-side-right * {
+  float: right;
+}
+
+/* line 550, ../sass/main.scss */
+ul.nav li.last-2-menu {
+  float: right;
+}
+
+/* line 556, ../sass/main.scss */
+.more-news {
+  right: -60px;
+}
+
+/*@media screen and (min-width: 769px) and (max-width: 999px)
+{
+	.main-body,
+	.container
+	{
+		
+	}
+
+	#divTransLight,
+	#imgVer
+	{
+		right: 90px;
+	}
+
+	ul.nav
+	{
+		width: 100%;
+
+		li
+		{
+			width: 25%;
+		}
+	}
+
+	.center-content 
+	{
+		overflow: hidden;
+		position: relative;
+		height: $centerHeight;
+
+		> * {
+		  width: $centerWidth;
+		  position: absolute;
+		  left: 50%;
+		  top: 0;
+		  margin-left: -$centerWidth / 2;
+		  height: $centerHeight;
+		}
+	}
+
+	.col-side
+	{
+		height: $flashHeight;
+
+		.flash-block
+		{
+			float: left;
+			width:50%;
+			height: $flashHeight;
+
+			* 
+			{
+				width: 100%;
+				height: $flashHeight;
+			}
+		}
+	}
+	.more-news
+	{
+		right: $paddingWidth;
+	}
+}
+@media screen and (max-width: 768px)
+{
+	.main-body
+	{
+		
+		margin-left:10px;
+		margin-right:10px;
+	}
+	.inip-header *
+	{
+		
+	}
+	.inip-header
+	{
+		width: 100%;		
+		background-position:center; 
+	}
+	#imgVer
+	{
+		display: none;
+	}
+	.logo-item
+	{
+		position: absolute;
+		top: 50px !important;
+		left: 0px;
+	}
+	#divTransLight
+	{
+		left: 100px;
+		top: 60px;
+	}
+
+	.navbar-header
+	{
+		margin-right: 0px !important;
+		margin-left: 0px !important;
+		border: 1px solid #8e8e8e;
+	}
+	#nav-collapse-1
+	{
+		margin-left: 0px !important;		
+		margin-right: 0px !important;		
+		&.nav-collapse
+		{
+			margin-right: 0px;
+			margin-left: 0px;
+		}
+		ul.nav
+		{
+			width: 100%;
+
+			li
+			{
+				width: 100%;
+				div
+				{
+					height: 30px;
+					border: 1px solid silver;
+				}
+			}
+		}
+	}	
+
+	.center-content
+	{
+		overflow: hidden;
+		position: relative;
+		height: $centerHeight;
+
+		> * {
+		  width: $centerWidth;
+		  position: absolute;
+		  left: 50%;
+		  top: 0;
+		  margin-left: -$centerWidth / 2;
+		  height: $centerHeight;
+		}
+	}
+	.col-side
+	{
+		height: $flashHeight;
+
+		.flash-block
+		{
+			float: left;
+			width:50%;
+			height: $flashHeight;
+
+			* 
+			{
+				width: 100%;
+				height: $flashHeight;
+			}
+		}
+	}
+	.more-news
+	{
+		bottom: 15px;
+		right: $paddingWidth;
+	}
+}*/

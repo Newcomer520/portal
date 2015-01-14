@@ -1,12 +1,13 @@
 @import "compass/reset";
 @import "compass/css3";
 @import "compass/typography/links/link-colors";
-$fixedWidth: 980px;
+$fixedWidth: 1000px;
 $paddingWidth: 15px;
 
 $menuWidth: ($fixedWidth - $paddingWidth * 2) / 8;
+$menuBarHeight: 50px;
 
-$flashDivWidth: 245px;
+$flashDivWidth: 250px;
 /*$flashDivWidth: 180px;*/
 $flashWidth: 170px;
 $flashHeight: 225px;
@@ -19,6 +20,7 @@ $widgetHeight: 40px;
 .main-body,
 .container
 {
+/*comment*/
 	/*width: $fixedWidth !important;*/
 }
 
@@ -31,10 +33,10 @@ $widgetHeight: 40px;
 	/*width: 100%;*/
 	/*margin-left: auto;
 	margin-right: auto;*/
-	margin-top: 10px;
+	margin-top: 5px;
 	/*background:url(../pages/App_Themes/image/Map21_Title.png);
 	@include background-size(100% 100%);*/
-	height: 50px !important;
+	height: $menuBarHeight !important;
 	vertical-align: middle;	
 	position: relative;
 
@@ -72,18 +74,43 @@ $widgetHeight: 40px;
 #divTransLight
 {
 	position: absolute; 
-	right:193px;
+	/*right:183px;*/
+	left: 75%;
 	top: 2px;
 	z-index: 10;
 
 }
+.inip-version
+{
+	position: absolute;
+	z-index: 10;
+	left:75%;
+	top:35px;
+}
 #imgVer
 {
-	position: absolute; 
-	right:161px;
+	/*position: absolute; */
+	/*left: 75%;*/
 	bottom: 0px;
 	z-index: 10;
 	cursor:pointer;
+}
+.mapp
+{
+	border: none;
+	position: absolute;
+	z-index: 10;
+	top: 1px;
+	right: 88px;
+	height: 49px;
+	width: 54px;
+
+}
+.inx-tube
+{
+	position: absolute;
+	width: 58px;
+	height: 50px;
 }
 #nav-collapse-1
 {
@@ -95,7 +122,7 @@ nav
 	{
 		min-height: 5px !important;
 		border: none !important;
-		margin-bottom: 0px !important;
+		margin-bottom: 0px !important;		
 	}
 	&.navbar-default
 	{
@@ -105,22 +132,31 @@ nav
 	{
 		padding-left: 0px !important;
 		padding-right: 0px !important;
-	}
+	}	
 }
 
 ul.nav
-{
-
+{	
+	float: left !important;
+	margin: 0px !important;
+	li:first-child
+	{
+		div
+		{
+			border-left: 1px solid silver;
+		}
+	}
 	li
 	{
 		width: $menuWidth;
 		box-sizing: border-box;
+		float: left !important;
 
 		div
 		{	
 			display: inline-block;
 			border-top:1px solid silver;
-			border-bottom:1px solid silver;
+			border-bottom:1px solid gray;
 			border-right: 1px solid silver;
 			height: 25px;
 			line-height: 25px;
@@ -140,12 +176,14 @@ ul.nav
 				}
 			}
 
-			&:hover
+			&:hover,
+			&:hover *,
+			*:hover
 			{
 				cursor: pointer;
-				color: white;
-				@include background(linear-gradient(top, #fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%));
-				-pie-background: linear-gradient(top, #fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%);
+				color: white !important;
+				@include background(linear-gradient(#fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%));
+				-pie-background: linear-gradient(#fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%);
 				behavior: url(local/PIE.htc);
 			}
 		}	
@@ -156,7 +194,7 @@ ul.nav
 {
 	@include background(linear-gradient(#999999, #FFFFFF, #D7D7D7, #999999, #5E5E5E));
  
-    -pie-background: linear-gradient(top, #999999, #FFFFFF, #D7D7D7, #999999, #5E5E5E); 	
+    -pie-background: linear-gradient(#999999, #FFFFFF, #D7D7D7, #999999, #5E5E5E); 	
 
     behavior: url(local/PIE.htc);
 }
@@ -164,11 +202,16 @@ ul.nav
 {
 	@include background(linear-gradient(#97EAFF, #C6F1FF, #EEFAFF, #44C7FF, #006FDD));
  
-    -pie-background: linear-gradient(top, #97EAFF, #C6F1FF, #EEFAFF, #44C7FF, #006FDD); 	
+    -pie-background: linear-gradient(#97EAFF, #C6F1FF, #EEFAFF, #44C7FF, #006FDD); 	
 
     behavior: url(local/PIE.htc);
 }
-
+.menu-gray,
+.menu-light-blue
+{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
 a.csVersion
 {
 	@include link-colors(white, white, white, white);
@@ -269,15 +312,27 @@ a.csVersion
 	{
 		right: 0px;
 	}
+	.widget-TS16949
+	{
+		right: 70px;
+		padding-top: 5px;
+		button {
+			height: 30px;
+			white-space: normal;
+			font-size: 11px;
+			line-height: 11px;
+		}
+	}
 
 	.notice-container
 	{
-		/*width: 80%;*/
 		padding-top: 22px;
-		margin-left: auto;
-		margin-right: auto;
+		/*margin-left: auto;
+		margin-right: auto;*/
+		margin-left: 100px;
+		margin-right: 150px;
 		height: 20px;
-		width: 80%;
+		/*width: 70%;*/
 		vertical-align: middle;	
 		/*float: left;*/
 		
@@ -290,6 +345,13 @@ a.csVersion
 		.notice
 		{
 			margin-right: 150px;
+		}
+		.notice-emergency a,
+		.notice-emergency a:link,
+		.notice-emergency a:hover,
+		.notice-emergency a:visited,
+		{
+			color: red !important;
 		}
 		.notice,
 		.notice a,
@@ -322,12 +384,124 @@ a.csVersion
 	box-sizing: border-box;
 	border: 2px solid black;
 	display: none;
+	padding: 2px;
+}
+
+.modal-dialog
+{
+	margin-top: 10% !important;
+}
+.modal-header
+{
+	color: white;	
+	background-color: #428bca;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	&.help-desk
+	{
+		padding: 3px;
+		height: 30px;
+		a,
+		a:visited
+		a:hover
+		{
+			text-decoration: none;
+			color: white;
+			line-height: 24px;
+			height: 24px;
+			vertical-align: middle;
+		}
+		img
+		{
+			float: right;
+			cursor: pointer;
+		}
+	}
+}
+.modal-body
+{
+	word-break:break-all;
+	.label-info
+	{
+		width: 80px;
+		display: inline-block !important;
+	}
+	&.help-desk
+	{		
+		h1 
+		{
+			font-weight: bold;
+			color: blue;
+			margin-top: 10px;
+		}		
+		
+		.issue-tracking
+		{
+			position: absolute;
+			right: 3px;
+			bottom: 3px;
+		}
+	}
+}
+
+.footer-oos
+{
+	text-align: center;
+	> div
+	{
+		float: left;		
+	}
+	.blocking
+	{
+		padding-top: 1px;
+		height: 10px;
+		width: ($fixedWidth - 2 * $paddingWidth - 630px)	/ 2;
+		text-align: left;
+
+		img.help-desk,
+		div.help-desk,
+		span.help-desk
+		{						
+			width: 55px;
+			height: 18px;
+			color: white;
+			padding: 3px;
+			font-size: 11px;
+			font-weight: bold;
+			text-align: center;
+			cursor: pointer;
+			@include border-radius(3px);
+			@include background(linear-gradient(#f94097 0%, #f90031 49%, #fc0213 50%, #fc677d 100%));
+    		-pie-background: linear-gradient(#f94097 0%, #f90031 49%, #fc0213 50%, #fc677d 100%); 	    		
+		}
+	}
+	.oos-container
+	{		
+		width: 630px;
+		margin-top: 2px;
+		color: #4f432b; 
+		font-size: 12px;
+		position: relative;		
+	}
+	.oos
+	{
+		margin-left: 5px;
+		font-size: 0px;
+		font-weight: bold;
+	}
+
+	.leading-letter
+	{
+		font-size: 14px;
+		color: red;		
+	}
+	.letters
+	{
+		font-size: 12px;
+	}
 }
 
 
-
-@media screen and (min-width: 1000px)
-{	
 	.main-body,
 	.container
 	{
@@ -383,9 +557,9 @@ a.csVersion
 	{
 		right:-60px;
 	}
-}
 
-@media screen and (min-width: 769px) and (max-width: 999px)
+
+/*@media screen and (min-width: 769px) and (max-width: 999px)
 {
 	.main-body,
 	.container
@@ -451,14 +625,13 @@ a.csVersion
 {
 	.main-body
 	{
-		/*width: 730px;*/
+		
 		margin-left:10px;
 		margin-right:10px;
 	}
 	.inip-header *
 	{
-		/*visibility: hidden;*/
-		/*display: none;*/
+		
 	}
 	.inip-header
 	{
@@ -549,4 +722,4 @@ a.csVersion
 		bottom: 15px;
 		right: $paddingWidth;
 	}
-}
+}*/

@@ -1,0 +1,28 @@
+@import "compass/css3";
+
+.inip-header
+{
+	behavior: url(local/PIE.htc);	
+}
+
+.modal-content
+{
+	behavior: url(local/PIE.htc);
+
+	/*for IE*/
+	.modal-footer
+	{
+		position: relative;
+	}	
+}
+.footer-oos
+{
+	.help-desk
+	{
+		behavior: url(local/PIE.htc);
+	}
+}
+ul.nav
+{
+	
+}

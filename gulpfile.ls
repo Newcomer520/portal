@@ -4,6 +4,7 @@ minifyCSS = require 'gulp-minify-css'
 rename = require 'gulp-rename'
 
 paths = 
+	dest: '//tnvcmipad/d$/ApplicationSystem/inip/local/'
 	compass:
 		watch: 'compass/sass/*.scss'
 		project: path.join __dirname, 'compass'
@@ -17,9 +18,10 @@ paths =
 gulp.task 'default', ->
 	run-sequence do
 		\build-compass
-		\build-ng-template
+		#\build-ng-template
+		\dev-src
 		\watch-sass
-		\watch-ng-template
+		#\watch-ng-template
 
 gulp.task 'build-compass', ->	
 	console.log 'building sass....'
@@ -37,6 +39,14 @@ gulp.task 'build-compass', ->
 		.pipe rename (p) !->
 			p.dirname = './'
 		.pipe gulp.dest paths.compass.dest
+
+gulp.task 'dev-src', ->
+	webpack = require('gulp-webpack')
+	webpackConfig = require('./src/webpack.config.js')({debug: true})
+	gulp.src('src/main.jsx')
+		.pipe(webpack(webpackConfig))
+		.pipe(gulp.dest(paths.dest))
+
 
 
 gulp.task 'watch-sass', !->

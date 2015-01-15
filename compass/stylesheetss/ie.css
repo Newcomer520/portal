@@ -17,3 +17,8 @@
 .footer-oos .help-desk {
   behavior: url(local/PIE.htc);
 }
+
+/* line 27, ../sass/ie.scss */
+.widget-TS16949 .btn {
+  behavior: url(local/PIE.htc);
+}

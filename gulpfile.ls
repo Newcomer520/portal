@@ -19,8 +19,8 @@ gulp.task 'default', ->
 	run-sequence do
 		\build-compass
 		#\build-ng-template
-		\dev-src
 		\watch-sass
+		\dev-src		
 		#\watch-ng-template
 
 gulp.task 'build-compass', ->	
@@ -50,6 +50,7 @@ gulp.task 'dev-src', ->
 
 
 gulp.task 'watch-sass', !->
+	console.log 'watching-sass'
 	gulp.watch 'compass/sass/*.*', <[build-compass]>
 
 gulp.task 'watch-ng-template', ->	

@@ -1,9 +1,10 @@
 var React = require('react/addons');
-var SwitchorStore = require('../stores/switchor-store');
-var AppConstants = require('../CONSTANTS');
+var SwitchorStore = require('../../stores/switchor-store');
+var AppConstants = require('../../CONSTANTS');
 var assign = require('object-assign');
 var $ = require('jquery');
-var EasingFunction = require('../ease-function');
+var EasingFunction = require('../../ease-function');
+var Ts16949Overview = require('./overview/ts16949-overview.jsx');
 
 var Ts16949CenterZone = React.createClass({
 	propTypes: {
@@ -12,7 +13,7 @@ var Ts16949CenterZone = React.createClass({
 	getInitialState: function() {
 		return assign({
 			marginTop: undefined
-		},SwitchorStore.getCurrent());
+		}, SwitchorStore.getCurrent());
 	},
 	componentDidMount: function() {
 		SwitchorStore.addToggleListener(this.toggle);		
@@ -24,7 +25,11 @@ var Ts16949CenterZone = React.createClass({
 		if(this.state.view == AppConstants.DEFAULT_VIEW && this.state.marginTop == undefined)
 			return null;
 		var style = this.state.style;
-		return <div className="displayed" style={style} />;
+		return (
+			<div className="displayed" style={style}>
+				<Ts16949Overview />
+			</div>
+		);
 	},
 	animate: function() {
 		var startValue = -450;

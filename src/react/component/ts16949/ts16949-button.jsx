@@ -1,7 +1,7 @@
 var React = require('react');
-var AppAction = require('../actions/app-action');
-var SwitchorStore = require('../stores/switchor-store');
-var Constants = require('../CONSTANTS');
+var AppAction = require('../../actions/app-action');
+var SwitchorStore = require('../../stores/switchor-store');
+var Constants = require('../../CONSTANTS');
 var Ts16949Btn = React.createClass({
 	getInitialState: function() {
 		return {

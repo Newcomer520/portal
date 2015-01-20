@@ -1,3 +1,13 @@
-var react = require('react');
+var React = require('react');
+var Ts16949Btn = require('./react/component/ts16949-button.jsx');
+var Ts16949CenterZone = require('./react/component/ts16949-center-zone.jsx');
+React.render(
+	<Ts16949Btn />,
+	document.getElementById('li-ts16949')
+);
 
-console.log('hello react');
+React.render(
+	<Ts16949CenterZone duration={1000} />,
+	document.getElementById('ts16949-center-zone')
+)
+

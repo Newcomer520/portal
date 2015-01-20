@@ -42,7 +42,11 @@ gulp.task 'build-compass', ->
 
 gulp.task 'dev-src', ->
 	webpack = require('gulp-webpack')
-	webpackConfig = require('./src/webpack.config.js')({debug: true})
+	#optimize-plugin = require("webpack/lib/optimize/UglifyJsPlugin");
+	webpackConfig = require('./src/webpack.config.js') do
+		devtool: '#inline-source-map'
+		#plugins: [new optimize-plugin {minimize: true}]
+	
 	gulp.src('src/main.jsx')
 		.pipe(webpack(webpackConfig))
 		.pipe(gulp.dest(paths.dest))

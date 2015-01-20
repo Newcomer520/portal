@@ -1,6 +1,8 @@
 var path = require('path');
+var assign = require('object-assign');
+
 module.exports = function(options) {
-	return {
+	return assign({
 		//entry: ['./src/main.jsx'],
 		entry: {
 			'main-ng': './src/main-ng.js',
@@ -30,10 +32,9 @@ module.exports = function(options) {
 		  'pages//App_Themes//image//VER.png': "empty"
 		},
 		//devtool: "#source-map",
-		devtool: "#inline-source-map",
-		debug: options.debug? true: false,
+		debug: true,
 		watch: true,
 		target: 'web'
-	}	
+	}, options);
 }
 

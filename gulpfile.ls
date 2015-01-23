@@ -2,9 +2,16 @@ require! <[gulp gulp-compass gulp-changed path run-sequence gulp-sass]>
 template-cache = require 'gulp-angular-templatecache'
 minifyCSS = require 'gulp-minify-css'
 rename = require 'gulp-rename'
+xml2json = require 'gulp-xml2json'
+svgParser = require 'svg-parser'
+webpack = require('gulp-webpack')
+cache = require('gulp-cached')
 
 paths = 
-	dest: '//tnvcmipad/d$/ApplicationSystem/inip/local/'
+	svg:
+		src: 'not-version-controlled/svg/**/*.svg'
+		dest: './src/svg2json'
+	dest: '//tnvcmipad/d$/ApplicationSystem/inip/local/build'
 	compass:
 		watch: 'compass/sass/*.scss'
 		project: path.join __dirname, 'compass'
@@ -17,11 +24,14 @@ paths =
 #gulp.task 'default', <[watch-sass]>
 gulp.task 'default', ->
 	run-sequence do
-		\build-compass
+		#\build
 		#\build-ng-template
 		\watch-sass
+		\watch-svg
 		\dev-src		
 		#\watch-ng-template
+
+gulp.task 'build', <[build-compass build-src parse-svg]>
 
 gulp.task 'build-compass', ->	
 	console.log 'building sass....'
@@ -39,11 +49,20 @@ gulp.task 'build-compass', ->
 		.pipe rename (p) !->
 			p.dirname = './'
 		.pipe gulp.dest paths.compass.dest
+gulp.task 'build-src', ->
+	console.log 'build src...'
+	webpackConfig = require('./webpack.config.js') do
+		debug: false
+		watch: false
+	gulp.src('src/main.jsx')
+		.pipe(webpack(webpackConfig))
+		.pipe(gulp.dest(paths.dest))
+
 
 gulp.task 'dev-src', ->
-	webpack = require('gulp-webpack')
+	
 	#optimize-plugin = require("webpack/lib/optimize/UglifyJsPlugin");
-	webpackConfig = require('./src/webpack.config.js') do
+	webpackConfig = require('./webpack.config.js') do
 		devtool: '#inline-source-map'
 		#plugins: [new optimize-plugin {minimize: true}]
 	
@@ -51,7 +70,16 @@ gulp.task 'dev-src', ->
 		.pipe(webpack(webpackConfig))
 		.pipe(gulp.dest(paths.dest))
 
+gulp.task 'parse-svg', ->
+	console.log 'parsing svg..'
+	gulp.src paths.svg.src
+		.pipe cache 'svg-parsing'
+		.pipe svgParser!
+		.pipe rename {extname: '.js'}
+		.pipe gulp.dest paths.svg.dest
 
+gulp.task 'watch-svg', ->
+	gulp.watch paths.svg.src, <[parse-svg]>
 
 gulp.task 'watch-sass', !->
 	console.log 'watching-sass'

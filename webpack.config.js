@@ -18,15 +18,22 @@ module.exports = function(options) {
 		},
 		output: {
 			path: path.join(__dirname, "build"),
-			publicPath: "build/",
+			publicPath: "local/build/",
 			filename: "[name].bundle.js",
 			chunkFilename: "[id].bundle.js"
 			//chunkFilename: "[chunkhash].js"
 		},
+		resolve: {
+			alias:{
+				'svg2json':'../../../../svg2json'
+			},
+			//modulesDirectories: ["web_modules", "node_modules", 'svg2json']
+			//root: ['/svg2json']
+		},
 		externals: {
 			jquery: "jQuery",
-			angular: "angular",
-			underscore: "underscore"
+			angular: "angular"//,
+			//underscore: "underscore"
 		},
 		node: {
 		  'pages//App_Themes//image//VER.png': "empty"

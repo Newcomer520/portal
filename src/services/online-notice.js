@@ -1,5 +1,6 @@
 var angular = require('angular')
-,	services = require('../namespace').services;
+,	services = require('../namespace').services
+,	_ = require('underscore');
 
 var onlinenotice = services.provider('onlineNotice', onlineNoticeProvider)
 

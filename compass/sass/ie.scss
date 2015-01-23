@@ -1,5 +1,8 @@
 @import "compass/css3";
-
+.pie-enhanced
+{
+	behavior: url(local/PIE.htc);		
+}
 .inip-header
 {
 	behavior: url(local/PIE.htc);	

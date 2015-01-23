@@ -21,6 +21,7 @@ paths =
 		src: './template/*.html'
 		dest: '//tnvcmipad/d$/ApplicationSystem/inip/local'
 
+
 #gulp.task 'default', <[watch-sass]>
 gulp.task 'default', ->
 	run-sequence do
@@ -49,11 +50,26 @@ gulp.task 'build-compass', ->
 		.pipe rename (p) !->
 			p.dirname = './'
 		.pipe gulp.dest paths.compass.dest
-gulp.task 'build-src', ->
+
+gulp.task 'build-dev-src', ->
+	w = require('webpack')
 	console.log 'build src...'
 	webpackConfig = require('./webpack.config.js') do
 		debug: false
 		watch: false
+		plugins: []
+	gulp.src('src/main.jsx')
+		.pipe(webpack(webpackConfig))
+		.pipe(gulp.dest(paths.dest))
+
+gulp.task 'build-src', ->
+	w = require('webpack')
+	console.log 'build src...'
+	webpackConfig = require('./webpack.config.js') do
+		debug: false
+		watch: false
+
+
 	gulp.src('src/main.jsx')
 		.pipe(webpack(webpackConfig))
 		.pipe(gulp.dest(paths.dest))
@@ -63,7 +79,10 @@ gulp.task 'dev-src', ->
 	
 	#optimize-plugin = require("webpack/lib/optimize/UglifyJsPlugin");
 	webpackConfig = require('./webpack.config.js') do
+		debug: true
+		watch: true
 		devtool: '#inline-source-map'
+		plugins: []
 		#plugins: [new optimize-plugin {minimize: true}]
 	
 	gulp.src('src/main.jsx')

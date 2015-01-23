@@ -1,5 +1,6 @@
 var path = require('path');
 var assign = require('object-assign');
+var webpack = require('webpack');
 
 module.exports = function(options) {
 	return assign({
@@ -25,7 +26,7 @@ module.exports = function(options) {
 		},
 		resolve: {
 			alias:{
-				'svg2json':'../../../../svg2json'
+				'svg2json':'../../../../svg2json', //this ok
 			},
 			//modulesDirectories: ["web_modules", "node_modules", 'svg2json']
 			//root: ['/svg2json']
@@ -39,8 +40,9 @@ module.exports = function(options) {
 		  'pages//App_Themes//image//VER.png': "empty"
 		},
 		//devtool: "#source-map",
-		debug: true,
-		watch: true,
+		debug: false,
+		watch: false,
+		plugins:[new webpack.optimize.UglifyJsPlugin()],
 		target: 'web'
 	}, options);
 }

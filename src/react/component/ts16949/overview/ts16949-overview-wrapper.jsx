@@ -36,7 +36,7 @@ var Wrapper = React.createClass({
 					<Rectangle  width={SIDEBAR.width} height={SIDEBAR.height} radius={20} stroke="#000" strokeWidth="2" fill="#78b0f0" />
 					<Text font={font(30)} alignment="center" fill="#000" y={20} x={50+15} rotation={90} alignment="left">Customer Satisfaction</Text>
 				</Group>
-				<ShadowedRect x={STYLE.width/2-STYLE.padding-150} y={STYLE.padding} width={300} height={80} fill="#3e8ce3" onClick={processFunc.bind(this,'MP1')}>
+				<ShadowedRect x={STYLE.width/2-STYLE.padding-150} y={STYLE.padding} width={300} height={80} fill="#3e8ce3" onClick={processFunc.bind(this,'MP1')} title="SP1">
 					<Group x={300/2} y={5}>
 						<Text font={font()} alignment="center" fill="#000" y={0}>Business and KPI</Text>
 						<Text font={font()} alignment="center" fill="#000" y={25}>management process</Text>
@@ -86,7 +86,7 @@ var Wrapper = React.createClass({
 					</Group>
 				</Ellipse>
 				{/*central ellipse*/}
-				<Ellipse width={ES.width} height={ES.height} fill="#f6e1ff"  x={ES.x+ES.width*0.8} y={ES.y2+65} scale={1} hoverCursor="pointer">
+				<Ellipse width={ES.width} height={ES.height} fill="#f6e1ff"  x={ES.x+ES.width*0.8} y={ES.y2+65} scale={1} hoverCursor="pointer" onClick={processFunc.bind(this,'COP4')}>
 					<Text font={font()} alignment="center" fill="#000" y={-30}>R & D</Text>
 					<Text font={font()} alignment="center" fill="#000" y={-30+ES.toffset}>Process</Text>
 					<Text font={font()} alignment="center" fill="#000" y={-30+ES.toffset*2}>(7.3,7.6.3,8.4,8.5)</Text>

@@ -100,30 +100,35 @@ var Ts16949Process = React.createClass({
 		var rendered = [];
 		var m;
 		var metaInfo;
+		var key;
 
-		for(var i = 0; i < data.length; i++) {
-			children=[];			
+		for(var i = 0; i < data.length; i++) {			
 			metaInfo = parseContent(data[i]);
 			m = <span style={metaInfo.style}>{metaInfo.content}</span>
-			while(i+1 < data.length) {
-				metaInfo = parseContent(data[i+1]);
-				if(!metaInfo.li)
-					break;
-				children.push(
-					<li key={process + '-' + item + '-' + i}>
-						<span style={metaInfo.style}>{metaInfo.content}</span>
-					</li>
-				);
-				/*if(data[i+1][0] !== '-') {
-					break;					
+			children = [];
+			//parse li
+			LI.forEach(function(li) {
+				var lis=[];
+				key = process + '-' + item + '-' + i + '-' + li.key 
+				while(i+1 < data.length) {
+					metaInfo = parseContent(data[i+1], li);
+					if(!metaInfo.li)
+						break;
+					lis.push(
+						<li key={process + '-' + item + '-' + i}>
+							<span style={metaInfo.style}>{metaInfo.content}</span>
+						</li>
+					);				
+					i = i + 1;
 				}
-				children.push(
-					<li key={process + '-' + item + '-' + i}>{data[i+1].substr(1)}</li>
-				);*/
-				i = i + 1;
-			}
-			if(children.length > 0)
-				children = <ul className="dash">{children}</ul>;
+				
+				if(lis.length > 0)
+					children.push(
+						<ul key={key} className={li.className}>{lis}</ul>
+					);
+
+			});	
+			console.log(children)		
 			rendered.push(
 				<li key={process + '-' + item + '-' + i}>
 					{m}
@@ -141,22 +146,21 @@ var Ts16949Process = React.createClass({
 			</div>
 		);
 
-		function parseContent(datum) {
+		function parseContent(datum, li) {
 			var ret;
 			if(typeof datum === 'string') {
-				return parseLi(datum)
+				return parseLi(datum, li)
 			}
 
 			else if(typeof datum.content !== 'string')
 				return ret;
 
-			ret = parseLi(datum.content);
-			console.log(ret)
+			ret = parseLi(datum.content, li);
 			return assign(ret, {style:datum.style});
 			//suitable object
 
 
-			function parseLi(content) {
+			function parseLi(content, li) {
 				var ret = {
 					li: undefined,
 					content: ''
@@ -164,9 +168,9 @@ var Ts16949Process = React.createClass({
 
 				if(!content || typeof content !== 'string')
 					return ret;
-				if(content[0] === '-') {
+				if(li && content[0] === li.key) {
 					ret.content = datum.substr(1);
-					ret.li = '-';
+					ret.li = li.className;
 				}
 					
 				else
@@ -219,6 +223,11 @@ var BOXES = {
 	methods: 'Methods/Procedure',
 	performance: 'Performance/measurement'
 }
+
+var LI = [
+	{key: '-', className: 'dash'},
+	{key: '!', className: 'double-dash'}
+]
 /*
 var PROCESSES = {
 	'MP1': {

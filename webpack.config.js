@@ -27,7 +27,8 @@ module.exports = function(options) {
 		resolve: {
 			//root: [__dirname],
 			alias:{
-				svgfolder: path.join(__dirname, 'src/svg2json')
+				svgfolder: path.join(__dirname, 'src/svg2json'),
+				'my-react': path.join(__dirname, 'src/react')
 				//'svg2json':'../../../../svg2json', //this ok
 				//'svg2json': '/src/svg2json'
 			},

@@ -1,0 +1,29 @@
+.hidden
+{
+	display: hidden;
+}
+.center-zone
+{
+	width: 100%;
+	height: 100%;	
+	.hidden-center-zone
+	{
+		top: -100000px;
+	}
+	&.ts16949 {
+		z-index: 5;
+		> div
+		{
+			padding-left: 15px;
+			padding-right: 15px;
+			margin-top: 0px;
+			width: 100%;
+			height: 100%;			
+		}
+		.wrapper
+		{
+			position: relative;
+			
+		}
+	}
+}

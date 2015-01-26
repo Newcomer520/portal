@@ -1,10 +1,14 @@
+require('./center-zone.scss');
 var React = require('react/addons');
 var SwitchorStore = require('../../stores/switchor-store');
 var AppConstants = require('../../CONSTANTS');
 var assign = require('object-assign');
 var $ = require('jquery');
 var EasingFunction = require('../../ease-function');
+var cx = React.addons.classSet;
 var Ts16949Overview = require('./overview/ts16949-overview.jsx');
+var Ts16949Process = require('./process/ts16949-process.jsx');
+var processAction = require('my-react/actions/ts16949-process-action');
 
 var Ts16949CenterZone = React.createClass({
 	propTypes: {
@@ -12,24 +16,57 @@ var Ts16949CenterZone = React.createClass({
 	},
 	getInitialState: function() {
 		return assign({
-			marginTop: undefined
+			marginTop: undefined,
+			type: OVERVIEW
 		}, SwitchorStore.getCurrent());
 	},
 	componentDidMount: function() {
-		SwitchorStore.addToggleListener(this.toggle);		
+		SwitchorStore.addToggleListener(this.toggle);	
 	},
 	componentWillUnmount: function() {
 		SwitchorStore.removeToggleListener(this.toggle);
 	},		
-	render: function() {
-		if(this.state.view == AppConstants.DEFAULT_VIEW && this.state.marginTop == undefined)
-			return null;
-		var style = this.state.style;
+	render: function() {		
+		var className = cx({
+			'hidden-center-zone': this.state.view == AppConstants.DEFAULT_VIEW && this.state.marginTop == undefined,
+			'wrapper': true
+		})
+
 		return (
-			<div className="displayed" style={style}>
-				<Ts16949Overview />
+			<div className={className}>
+				{this.renderOverview()}				
+				<Ts16949Process gotoOverview={this.gotoOverview} hidden={this.state.type !== PROCESS || this.state.view === DEFAULTPAGE} />
 			</div>
 		);
+	},
+	renderOverview: function() {
+		var hidden = (this.state.type !== OVERVIEW && this.state.view !== DEFAULTPAGE) || (this.state.view == AppConstants.DEFAULT_VIEW);
+		var overViewClass = cx({
+			'hidden': hidden 
+		});
+		var style = this.state.style;
+		//for ie, need to detect only rendering as displaying. 
+		//updated: change the display way: use absoulte position to improve IE8 performance
+		/*if(!hidden && this._ts16949Overview == null) {
+			
+		}*/
+		this._ts16949Overview = (<Ts16949Overview gotoProcess={this.gotoProcess} hidden={hidden} />);
+		//console.log(this._ts16949Overview)
+		return this._ts16949Overview;
+	},
+	gotoProcess: function(process) {
+		console.log(process ,' in center zone')
+		processAction.retrieveProcess(process);
+		this.setState({
+			type: PROCESS,
+			view: AppConstants.TS16949_VIEW
+		});
+	},
+	gotoOverview: function() {
+		this.setState({
+			type: OVERVIEW,
+			view: AppConstants.TS16949_VIEW
+		});	
 	},
 	animate: function() {
 		var startValue = -450;
@@ -53,12 +90,20 @@ var Ts16949CenterZone = React.createClass({
 	/**
 		toggle the zone*/
 	toggle: function() {
-		this.setState(SwitchorStore.getCurrent());
+		var state = SwitchorStore.getCurrent();
+		if(state.view === AppConstants.TS16949_VIEW)
+			state.view = DEFAULTPAGE;
+		this.setState(state);
+
 		
 		//this.animate();
-	}
+	},
+	_ts16949Overview: null
 });
 
 module.exports = Ts16949CenterZone;
 
 var MARGINTOP = -450;
+var DEFAULTPAGE = 'DEFAULTPAGE'
+var PROCESS = 'ts16949-process';
+var OVERVIEW = 'ts16949-overview';

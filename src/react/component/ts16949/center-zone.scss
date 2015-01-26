@@ -1,3 +1,5 @@
+@import "../default-style.scss";
+
 .hidden
 {
 	display: hidden;
@@ -5,13 +7,13 @@
 .center-zone
 {
 	width: 100%;
-	height: 100%;	
 	.hidden-center-zone
 	{
 		top: -100000px;
 	}
 	&.ts16949 {
 		z-index: 5;
+		height: 0px;
 		> div
 		{
 			padding-left: 15px;
@@ -23,7 +25,7 @@
 		.wrapper
 		{
 			position: relative;
-			
+			height: $defaultHeight;
 		}
 	}
 }

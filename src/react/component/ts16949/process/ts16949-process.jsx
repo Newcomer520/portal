@@ -127,8 +127,7 @@ var Ts16949Process = React.createClass({
 						<ul key={key} className={li.className}>{lis}</ul>
 					);
 
-			});	
-			console.log(children)		
+			});
 			rendered.push(
 				<li key={process + '-' + item + '-' + i}>
 					{m}
@@ -141,8 +140,10 @@ var Ts16949Process = React.createClass({
 		}, this);*/
 		return (
 			<div className="box">
-				<span className="title">{title}</span>
-				<ul>{rendered}</ul>
+				<div className="title">{title}</div>
+				<div className="wrapper">
+					<ul>{rendered}</ul>
+				</div>
 			</div>
 		);
 
@@ -213,8 +214,7 @@ var PROCESSES = [
 	'SP7',
 	'SP8',
 	'SP9',
-	'SP10',
-	'SP11'];
+	'SP10'];
 var BOXES = {
 	material: 'Material/Equipment',
 	competence: 'Competence/Training',

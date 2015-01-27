@@ -1,6 +1,6 @@
 var process = {
 	name: 'COP3',
-	title: 'Sales & Marketing',
+	title: 'Program management',
 	material: [
 		'Market information',
 		'INX strategy',

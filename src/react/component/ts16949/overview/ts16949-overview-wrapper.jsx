@@ -36,7 +36,7 @@ var Wrapper = React.createClass({
 					<Rectangle  width={SIDEBAR.width} height={SIDEBAR.height} radius={20} stroke="#000" strokeWidth="2" fill="#78b0f0" />
 					<Text font={font(30)} alignment="center" fill="#000" y={20} x={50+15} rotation={90} alignment="left">Customer Satisfaction</Text>
 				</Group>
-				<ShadowedRect x={STYLE.width/2-STYLE.padding-150} y={STYLE.padding} width={300} height={80} fill="#3e8ce3" onClick={processFunc.bind(this,'MP1')} title="SP1">
+				<ShadowedRect x={STYLE.width/2-STYLE.padding-150} y={STYLE.padding} width={300} height={80} fill="#3e8ce3" onClick={processFunc.bind(this,'MP1')}>
 					<Group x={300/2} y={5}>
 						<Text font={font()} alignment="center" fill="#000" y={0}>Business and KPI</Text>
 						<Text font={font()} alignment="center" fill="#000" y={25}>management process</Text>
@@ -69,7 +69,7 @@ var Wrapper = React.createClass({
 						<Text font={font()} alignment="center" fill="#000" y={ES.toffset*2}>( 7.1, 7.2 ,8.4.1)</Text>
 					</Group>
 				</Ellipse>
-				<Ellipse width={ES.width} height={ES.height} fill="#6edb5b"  x={970-ES.x} y={ES.y1} scale={1}>
+				<Ellipse width={ES.width} height={ES.height} fill="#6edb5b"  x={970-ES.x} y={ES.y1} scale={1} onClick={processFunc.bind(this,'COP5B')}>
 					<Group y={-40}>
 						<Text font={font()} alignment="center" fill="#000" y={0}>Customer</Text>
 						<Text font={font()} alignment="center" fill="#000" y={ES.toffset}>Satisfaction Process</Text>
@@ -77,7 +77,7 @@ var Wrapper = React.createClass({
 						<Text font={font()} alignment="center" fill="#000" y={ES.toffset*3}>8.4,8.5)</Text>
 					</Group>
 				</Ellipse>
-				<Ellipse width={ES.width} height={ES.height} fill="#40e0d0"  x={970-ES.x} y={ES.y2} scale={1} hoverCursor="pointer">
+				<Ellipse width={ES.width} height={ES.height} fill="#40e0d0"  x={970-ES.x} y={ES.y2} scale={1} hoverCursor="pointer" onClick={processFunc.bind(this,'COP5F')}>
 					<Group y={-38}>
 						<Text font={font()} alignment="center" fill="#000" y={0}>Manufacturing</Text>
 						<Text font={font()} alignment="center" fill="#000" y={ES.toffset}>Process</Text>
@@ -95,19 +95,19 @@ var Wrapper = React.createClass({
 				<MyGroup x={STYLE.padding+SIDEBAR.width+50} y={STYLE.padding+SIDEBAR.height-40}>
 					<Rectangle stroke="#000" strokeWidth={1} radius={10} width={STYLE.width-SIDEBAR.width*2-50*2} height={120} />
 				{/*Row 0*/}
-					<ShadowedRect x={STYLE.padding} y={BR.y1} width={BR.width0} height={BR.height} fill={BR.fill}>
+					<ShadowedRect x={STYLE.padding} y={BR.y1} width={BR.width0} height={BR.height} fill={BR.fill} onClick={processFunc.bind(this,'COP6')}>
 						<Group y={8} x={BR.width0/2}>
 							<Text font={font(12)} alignment="center" fill="#000" y={0}>Purchasing & Supplier Management</Text>
 							<Text font={font(12)} alignment="center" fill="#000" y={ES.toffset}>Process (7.4,7.4.1,7.4.2)</Text>
 						</Group>
 					</ShadowedRect>
-					<ShadowedRect x={STYLE.padding*2+BR.width0} y={BR.y1} width={BR.width0} height={BR.height} fill={BR.fill}>
+					<ShadowedRect x={STYLE.padding*2+BR.width0} y={BR.y1} width={BR.width0} height={BR.height} fill={BR.fill} onClick={processFunc.bind(this,'SP7')}>
 						<Group y={8} x={BR.width0/2}>
 							<Text font={font(12)} alignment="center" fill="#000" y={0}>Production Management</Text>
 							<Text font={font(12)} alignment="center" fill="#000" y={ES.toffset}>Process (7.5.1.6, 7.5.5)</Text>
 						</Group>
 					</ShadowedRect>
-					<ShadowedRect x={STYLE.padding*3+BR.width0*2} y={BR.y1} width={BR.width0} height={BR.height} fill={BR.fill}>
+					<ShadowedRect x={STYLE.padding*3+BR.width0*2} y={BR.y1} width={BR.width0} height={BR.height} fill={BR.fill} onClick={processFunc.bind(this,'SP8')}>
 						<Group y={8} x={BR.width0/2}>
 							<Text font={font(12)} alignment="center" fill="#000" y={0}>Human Resource Process</Text>
 							<Text font={font(12)} alignment="center" fill="#000" y={ES.toffset}>(6.2)</Text>
@@ -115,13 +115,13 @@ var Wrapper = React.createClass({
 					</ShadowedRect>
 				{/*endof Row 0*/}
 				{/*Row 1*/}				
-					<ShadowedRect x={STYLE.padding} y={BR.y2} width={300} height={BR.height} fill={BR.fill}>
+					<ShadowedRect x={STYLE.padding} y={BR.y2} width={300} height={BR.height} fill={BR.fill} onClick={processFunc.bind(this,'SP9')}>
 						<Group y={8} x={300/2}>
 							<Text font={font(12)} alignment="center" fill="#000" y={0}>IT System. Management Process</Text>
 							<Text font={font(12)} alignment="center" fill="#000" y={ES.toffset}>(6.3)</Text>
 						</Group>
 					</ShadowedRect>
-					<ShadowedRect x={STYLE.padding*2+300} y={BR.y2} width={300} height={BR.height} fill={BR.fill}>
+					<ShadowedRect x={STYLE.padding*2+300} y={BR.y2} width={300} height={BR.height} fill={BR.fill} onClick={processFunc.bind(this,'SP10')}>
 						<Group y={8} x={300/2}>
 							<Text font={font(12)} alignment="center" fill="#000" y={0}>Quality Management Process</Text>
 							<Text font={font(12)} alignment="center" fill="#000" y={ES.toffset}>(4.2,5,7.4.3,8.1,8.2, 8.4,8.5)</Text>

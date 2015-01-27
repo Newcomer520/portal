@@ -47,7 +47,7 @@ var process = {
 		'Customer request Spec (COP3)',
 		'Communication material and media (tools, channels used ) ( C )',
 		'Customer satisfaction (all)',
-		'Customer Target Planning Customer Target Price(COP3)'
+		'Customer Target Planning Customer Target Price (COP3)'
 	],
 	methods: [
 		'4200P-001Roadmap Procedure',

@@ -56,7 +56,7 @@ function noticeMarqueeFactory($interval) {
 					totalSize = 
 					startPoint = $('div:first-child', ele).width();
 					stopPoint = 0;
-					step = -2;						
+					step = -5;						
 					left = startPoint;
 					break;
 				case 'vertical':

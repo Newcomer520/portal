@@ -57,13 +57,26 @@
 		overflow-y: auto;
 		height: 100%;
 		width: 100%;
-		/*word-break: break-all;*/
+		position: relative;
+		/**/
 
 		.title
 		{
+			height: 20px;
 			color: purple;
 			text-decoration: underline;
 			font-size: 15px;
+		}
+		div.wrapper
+		{
+			top: 20px;
+			bottom: 3px;
+			left: 3px;
+			right: 5px;
+			word-break: break-word;
+			overflow-x: hidden;
+			overflow-y: auto;
+			position: absolute;
 		}
 		ul 
 		{
@@ -73,22 +86,24 @@
 		ul.dash
 		{
 			list-style-type: none;
-			margin-left: 0px;
+			margin-left: 10px;
 			li:before
 			{
+				margin-left: 0px;
 				content: "→";
 			}
 			li
 			{
-				text-indent:3px; 		
+				text-indent:3px;				
 			}
 		}
 		ul.double-dash
 		{
 			list-style-type: none;
-			margin-left: 10px;		
+			margin-left: 20px;		
 			li:before
 			{
+				margin-left: 0px;
 				content: " * ";
 			}			
 			li
@@ -112,7 +127,7 @@
 				display: inline-block;
 				text-align: center;
 				
-				width: (100% / 12);
+				width: (100% / 11);
 
 				span 
 				{

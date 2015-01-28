@@ -1,0 +1,29 @@
+div.expandable-item
+{
+	display: inline-block;
+	vertical-align: top;
+
+	img.icon
+	{
+		width: 20px;
+		cursor: pointer;
+		margin-left: 5px;
+	}
+	div.content-links
+	{
+		margin-left: 5px;	
+
+		&.expandable
+		{
+			display: block;
+		}
+		&.collapse
+		{
+			display: none;
+		}
+		a
+		{
+			display: block;
+		}
+	}
+}

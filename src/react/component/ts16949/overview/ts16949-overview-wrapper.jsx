@@ -41,7 +41,7 @@ var Wrapper = React.createClass({
 					{this.renderTextBox('1',{fill:'green', x:-27, y:25})}
 				</LightBlueBox>				
 			{/*row 1*/}
-				<LightBlueBox x={GRID[1][0].x} y={GRID[1][0].y} width={200} height={180} hoverDisabled={true}>
+				<LightBlueBox x={GRID[1][0].x} y={GRID[1][0].y} width={200} height={180} hoverDisabled={true} mask={false}>
 					<Group x={100} y={70}>
 						<Text font={font(20)} alignment="center" fill="#000" y={0}>Customer</Text>
 						<Text font={font(20)} alignment="center" fill="#000" y={30}>Requirement</Text>
@@ -95,7 +95,7 @@ var Wrapper = React.createClass({
 						</Group>					
 						{this.renderTextBox('5',{fill:'blue', x:100, y:71})}
 					</LightBlueBox>					
-					<LightBlueBox x={230} y={100} width={120} height={70} fill="#FF7F24" stroke="#fff">						
+					<LightBlueBox x={230} y={100} width={120} height={70} fill="#FF7F24" stroke="#fff" mask={false}>	
 						<Group x={60} y={5}>
 							<Text font={font(11)} alignment="center" fill="#000" y={0}>Customer</Text>
 							<Text font={font(11)} alignment="center" fill="#000" y={15}>Satisfaction Process</Text>

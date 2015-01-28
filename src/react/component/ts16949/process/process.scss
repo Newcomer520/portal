@@ -8,8 +8,17 @@ $CentralWrapperPadding: 10px;
 	padding: 3px;
 	background-color: pink;
 	display: relative;
-	background-color: #faf7ff;/* $bgColor;*/
-
+	background-color: $bgColor;/*#faf7ff;*//* $bgColor;*/
+	.col-md-3
+	{
+		width: (100%/12*3);
+		float: left;
+	}
+	.col-md-6
+	{
+		width: (100%/12*6);
+		float: left;
+	}
 	.row
 	{
 		padding-left: 15px;
@@ -59,6 +68,7 @@ $CentralWrapperPadding: 10px;
 		height: 100%;
 		width: 100%;
 		position: relative;
+		background-color: #faf7ff;
 
 		&.central-box
 		{
@@ -66,6 +76,7 @@ $CentralWrapperPadding: 10px;
 			padding: $CentralWrapperPadding;
 			padding-right: $CentralWrapperPadding + 10px;
 			position: relative;
+			background-color: $bgColor;
 
 			>div.blocker
 			{
@@ -79,16 +90,56 @@ $CentralWrapperPadding: 10px;
 				border: 1px solid black;
 				position: absolute;
 				border-radius: 5px;
+				background-color: #faf7ff;
 
 				>.central-wrapper
 				{
 					top: 10px;
 					bottom: 10px;
 					left: 30px;
-					right: 20px;
-					overflow-y: auto;
-					overflow-x: hidden;
-					position: absolute;
+					right: 20px;					
+					position: absolute;					
+					div.wrapper-inner
+					{
+						position: absolute;
+						top: 20px;
+						bottom: 0px;
+						left: 0px;
+						right: 0px;
+						overflow-y: auto;
+						overflow-x: hidden;
+
+						div.central-process
+						{
+							position: relative;
+							padding: 10px;
+							margin-bottom: 20px;
+							text-align: center;
+							font-weight: bold;
+							background-color: #ffd700;						
+							border-radius: 5px;
+							border: 1px solid #8e8e8e;
+
+							.arrow-down
+							{
+								position: absolute;
+								top: -20px;
+								left: 50%;
+							}
+
+							.link {
+								margin-top: 5px;
+								margin-right: 10px;
+								text-decoration: underline;
+								display: inline-block;
+
+								&:visited
+								{
+									color: #2a6496;
+								}
+							}
+						}
+					}					
 				}
 			}
 			img.arrow
@@ -143,13 +194,13 @@ $CentralWrapperPadding: 10px;
 					}
 				}				
 			}
-		}
-		/**/
+		}				
 
 		.title
 		{
 			height: 20px;
-			color: purple;
+			color: black;
+			font-weight: bold;
 			text-decoration: underline;
 			font-size: 15px;
 		}
@@ -168,6 +219,12 @@ $CentralWrapperPadding: 10px;
 		{
 			list-style-type: disc;
 			margin-left: 20px;
+			li:before
+			,span
+			{
+				vertical-align: top;
+			}			
+
 		}
 		ul.dash
 		{
@@ -175,12 +232,17 @@ $CentralWrapperPadding: 10px;
 			margin-left: 10px;
 			li:before
 			{
+				font-size: 10px;
 				margin-left: 0px;
-				content: "→";
+				content: "●";
 			}
 			li
 			{
-				text-indent:3px;				
+				text-indent:3px;
+				>span 
+				{
+					margin-left: 3px;
+				}
 			}
 		}
 		ul.double-dash
@@ -189,8 +251,9 @@ $CentralWrapperPadding: 10px;
 			margin-left: 20px;		
 			li:before
 			{
+				font-size: 10px;
 				margin-left: 0px;
-				content: " * ";
+				content: " ● ";
 			}			
 			li
 			{

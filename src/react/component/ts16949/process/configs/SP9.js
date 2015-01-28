@@ -3,7 +3,7 @@ var process = {
 	title: 'Human Resource',
 	material: [		
 		'SP9.1Organization information management  system(OIMS)',
-		'SP9.2Recruiting system (manpower demand, aptitude test, etc.)',
+		{content:'SP9.2Recruiting system (manpower demand, aptitude test, etc.)', links:[{text:'INIP', url:'http://inip.local'}, {text:'Yahoo', url: 'http://tw.yahoo.com'}]},
 		'SP9.3 Learning certification system(LCS)',
 		'SP9.4Performance management  system, promotion system',
 		'SP9.5Compensation system (SAP/Smooth)',
@@ -20,7 +20,7 @@ var process = {
 		'Organization‘s policies (MP1)',
 		'-Align organizational structure to delivery of strategy',
 		{content:'-Recruiting policies'},
-		'-Promotion policies',
+		{content: '-Promotion policies', links:[{text:'INIP', url:'http://inip.local'}, {text:'Yahoo', url: 'http://tw.yahoo.com'}]},
 		'-Compensation & benefit policies',
 		'-Training Policies',
 		'-Employee Relation policies',
@@ -52,6 +52,14 @@ var process = {
 		'SP9.4 Delivery Rate / Improvement Rate(100%)',
 		'SP9.5 Accuracy of payroll (100%)',
 		'SP9.6 Preliminary reply rate on time(100%)'
+	],
+	center: [
+		{content: 'SP9.1 Organization Management', links: [{text: 'OMS', url: 'http://psam.cminl.oa/form/FRM_FA100_01.aspx?SYSID=OMS&IFELITE=Y'}]},
+		{content: 'SP9.2 Recruiting & Staffing', links: [{text: 'RMS', url: 'http://psam.cminl.oa/form/FRM_FA100_01.aspx?SYSID=RMS_AVO&IFELITE=Y'}]},
+		{content: 'SP9.3 Training & Development', links: [{text: 'HRD', url: 'http://psam.cminl.oa/form/FRM_FA100_01.aspx?SYSID=LMS'}]},
+		{content: 'SP9.4 Performance Management', links: [{text: 'HRD', url: 'http://psam.cminl.oa/form/FRM_FA100_01.aspx?SYSID=LMS'}]},
+		{content: 'SP9.5 Compensation & Benefits', links: [{text: 'CBMS', url: 'http://psam.cminl.oa/form/FRM_FA100_01.aspx?SYSID=CBMS&IFELITE=Y'}]},
+		{content: 'SP9.6 Employee Relation', style:{'background-color': 'gray', 'border': '1px solid red'}, links: [{text: 'EC2', url: 'http://psam.cminl.oa/form/FRM_FA100_01.aspx?SYSID=ECS&IFELITE=Y'}]}
 	]
 }
 

@@ -26,6 +26,7 @@ var LightBlueBox = React.createClass({
 					radius={10}
 					{...this.props}
 					x={0} y={0}
+					cursor="pointer"
 					fill="#fff" opacity={0} stroke={stroke} />)
 		return (
 			<Group 

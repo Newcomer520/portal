@@ -4,7 +4,7 @@ var AppConstants = require('../CONSTANTS');
 var assign = require('object-assign');
 
  
-var currentView = AppConstants.TS16949_VIEW;//debug//AppConstants.DEFAULT_VIEW;TS16949_VIEW
+var currentView = AppConstants.DEFAULT_VIEW;//debug//AppConstants.DEFAULT_VIEW;TS16949_VIEW
 var animating = false;
 
 function toggleView() {

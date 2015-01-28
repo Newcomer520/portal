@@ -55,7 +55,6 @@ var Ts16949CenterZone = React.createClass({
 		return this._ts16949Overview;
 	},
 	gotoProcess: function(process) {
-		console.log(process ,' in center zone')
 		processAction.retrieveProcess(process);
 		this.setState({
 			type: PROCESS,

@@ -10,6 +10,7 @@ var processAction = require('my-react/actions/ts16949-process-action');
 var assign = require('object-assign');
 var CentralWrapper = require('./central-box.jsx');
 var parseUtil = require('./configs/parse-util');
+var ExpandableContent = require('./expandable-content.jsx');
 
 var Ts16949Process = React.createClass({	
 	propTypes: {
@@ -32,7 +33,7 @@ var Ts16949Process = React.createClass({
 	render: function() {		
 		var isHidden = this.props.hidden;
 		var data = this.state.processData;
-		var index = PROCESSES.indexOf(data.name) >= 0 ? (PROCESSES.indexOf(data.name) + 1): '978';
+		//var index = PROCESSES.indexOf(data.name) >= 0 ? (PROCESSES.indexOf(data.name) + 1): '978';
 		var cls = cx({
 			'entry-page': true,
 			'hide-me': isHidden
@@ -44,7 +45,7 @@ var Ts16949Process = React.createClass({
 						{this.renderNavigator()}
 						<br/>
 						<div className="title">
-							{index + '. ' + data.title}
+							{data.name + '. ' + data.title}
 						</div>
 					</div>					
 					<div className="row row1">
@@ -62,7 +63,7 @@ var Ts16949Process = React.createClass({
 							</div>
 							<div className="row1-2">
 								<div className="column col-md-12">									
-									<CentralWrapper />
+									<CentralWrapper data={data.center} name={data.name} />
 								</div>
 							</div>
 						</div>
@@ -105,7 +106,7 @@ var Ts16949Process = React.createClass({
 
 		for(var i = 0; i < data.length; i++) {			
 			metaInfo = parseUtil.parseContent(data[i]);
-			m = <span style={metaInfo.style}>{metaInfo.content}</span>
+			m = this.renderItem(metaInfo);
 			children = [];
 			//parse li
 			LI.forEach(function(li) {
@@ -117,7 +118,8 @@ var Ts16949Process = React.createClass({
 						break;
 					lis.push(
 						<li key={process + '-' + item + '-' + i}>
-							<span style={metaInfo.style}>{metaInfo.content}</span>
+							{this.renderItem(metaInfo)}
+							{/*<span style={metaInfo.style}>{metaInfo.content}</span>*/}
 						</li>
 					);				
 					i = i + 1;
@@ -127,8 +129,7 @@ var Ts16949Process = React.createClass({
 					children.push(
 						<ul key={key} className={li.className}>{lis}</ul>
 					);
-
-			});
+			}, this);
 			rendered.push(
 				<li key={process + '-' + item + '-' + i}>
 					{m}
@@ -147,6 +148,12 @@ var Ts16949Process = React.createClass({
 				</div>
 			</div>
 		);		
+	},
+	renderItem: function(metaInfo) {		
+		//console.log(metaInfo.links)		
+		return metaInfo.links?
+			(<ExpandableContent content={metaInfo.content} links={metaInfo.links} style={metaInfo.style}/>): 
+			(<span style={metaInfo.style}>{metaInfo.content}</span>);
 	},
 	handleProcess: function(data) {
 		this.setState({

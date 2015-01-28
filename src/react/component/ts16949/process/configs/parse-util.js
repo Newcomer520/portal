@@ -10,7 +10,7 @@ function parseContent(datum, li) {
 		return ret;
 
 	ret = parseLi(datum.content, li);
-	return assign(ret, {style:datum.style});	
+	return assign(ret, {style:datum.style, links: datum.links});	
 }
 
 //suitable object

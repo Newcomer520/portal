@@ -29,7 +29,7 @@ var Ts16949Btn = React.createClass({
 		});
 	},
 	handleClick: function() {
-		AppAction.toggleCenterZone();
+		//AppAction.toggleCenterZone();
 		//window.open('ts16949-temp.html');
 	}
 

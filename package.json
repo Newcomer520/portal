@@ -28,6 +28,7 @@
   "dependencies": {
     "css-loader": "^0.9.1",
     "es5-shim": "^4.0.5",
+    "file-loader": "^0.8.1",
     "flux": "^2.0.1",
     "gulp-webpack": "^1.1.2",
     "html-loader": "^0.2.3",

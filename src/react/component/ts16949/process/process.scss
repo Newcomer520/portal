@@ -1,5 +1,6 @@
 @import "../../default-style.scss";
 
+$CentralWrapperPadding: 10px;
 .ts16949-process
 {
 	width: 100%;
@@ -58,6 +59,91 @@
 		height: 100%;
 		width: 100%;
 		position: relative;
+
+		&.central-box
+		{
+			border: none;
+			padding: $CentralWrapperPadding;
+			padding-right: $CentralWrapperPadding + 10px;
+			position: relative;
+
+			>div.blocker
+			{
+				top: $CentralWrapperPadding;
+				left: $CentralWrapperPadding;
+				right: $CentralWrapperPadding + 10px;
+				bottom: $CentralWrapperPadding;
+				overflow-y: hidden;
+				overflow-x: hidden;
+				z-index: 1;
+				border: 1px solid black;
+				position: absolute;
+				border-radius: 5px;
+
+				>.central-wrapper
+				{
+					top: 10px;
+					bottom: 10px;
+					left: 30px;
+					right: 20px;
+					overflow-y: auto;
+					overflow-x: hidden;
+					position: absolute;
+				}
+			}
+			img.arrow
+			{
+				position: absolute;
+						
+				z-index: 2;
+
+				&.left, &.right
+				{
+					height: 40px;
+					width: 40px;
+					&.left
+					{
+					
+						left: 0px;
+						top: 47px;
+					}
+					&.right
+					{
+						right: 0px;
+						top: 47px;				
+					}
+				}								
+				&.top-1
+				{
+					width: 40px;
+					height: 20px;
+					left: 120px;
+					top: 0;
+				}
+				&.top-2
+				{
+					width: 40px;		
+					height: 20px;
+					right: 120px;
+					top: 0;
+				}
+
+				&.bot-1,&.bot-2
+				{
+					width: 40px;
+					height: 20px;
+					bottom: 0px;
+					&.bot-1
+					{
+						left: 120px;
+					}
+					&.bot-2
+					{
+						right: 120px;
+					}
+				}				
+			}
+		}
 		/**/
 
 		.title

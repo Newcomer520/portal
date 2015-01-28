@@ -6,11 +6,12 @@ var EventMixins = {
 	},
 	getDefaultProps: function() {
 		return {
-			hoverDisabled: true
+			hoverDisabled: false
 		}
 	},
 	handleMouseMove: function() {	
-		if(this.props.hoverDisabled === false && this.state.hover !== true) {
+		if(this.props.hoverDisabled === false && this.state.hover !== true) 
+		{
 			this.setState({hover: true});
 		}
 	},

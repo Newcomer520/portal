@@ -8,6 +8,8 @@ var cx = React.addons.classSet;
 var processStore = require('my-react/stores/process-store');
 var processAction = require('my-react/actions/ts16949-process-action');
 var assign = require('object-assign');
+var CentralWrapper = require('./central-box.jsx');
+var parseUtil = require('./configs/parse-util');
 
 var Ts16949Process = React.createClass({	
 	propTypes: {
@@ -59,9 +61,8 @@ var Ts16949Process = React.createClass({
 								</div>
 							</div>
 							<div className="row1-2">
-								<div className="column col-md-12">
-									<div className="box">
-									</div>
+								<div className="column col-md-12">									
+									<CentralWrapper />
 								</div>
 							</div>
 						</div>
@@ -103,7 +104,7 @@ var Ts16949Process = React.createClass({
 		var key;
 
 		for(var i = 0; i < data.length; i++) {			
-			metaInfo = parseContent(data[i]);
+			metaInfo = parseUtil.parseContent(data[i]);
 			m = <span style={metaInfo.style}>{metaInfo.content}</span>
 			children = [];
 			//parse li
@@ -111,7 +112,7 @@ var Ts16949Process = React.createClass({
 				var lis=[];
 				key = process + '-' + item + '-' + i + '-' + li.key 
 				while(i+1 < data.length) {
-					metaInfo = parseContent(data[i+1], li);
+					metaInfo = parseUtil.parseContent(data[i+1], li);
 					if(!metaInfo.li)
 						break;
 					lis.push(
@@ -145,41 +146,7 @@ var Ts16949Process = React.createClass({
 					<ul>{rendered}</ul>
 				</div>
 			</div>
-		);
-
-		function parseContent(datum, li) {
-			var ret;
-			if(typeof datum === 'string') {
-				return parseLi(datum, li)
-			}
-
-			else if(typeof datum.content !== 'string')
-				return ret;
-
-			ret = parseLi(datum.content, li);
-			return assign(ret, {style:datum.style});
-			//suitable object
-
-
-			function parseLi(content, li) {
-				var ret = {
-					li: undefined,
-					content: ''
-				};
-
-				if(!content || typeof content !== 'string')
-					return ret;
-				if(li && content[0] === li.key) {
-					ret.content = datum.substr(1);
-					ret.li = li.className;
-				}
-					
-				else
-					ret.content = content;
-				return ret;
-			}
-
-		}
+		);		
 	},
 	handleProcess: function(data) {
 		this.setState({

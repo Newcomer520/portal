@@ -16,11 +16,13 @@ var MyGroup = React.createClass({
 			</Group>
 		);
 	},
-	renderChildren: function() {
+	renderChildren: function() {		
+		if (!this.props.children.map)
+			return null;
 		var childrenWithHovered = 		
 		this.props.children.map(function(child, idx) {		
 			return React.addons.cloneWithProps(child, {
-				hoverDisabled: this.props.hoverDisabled,
+				hoverDisabled: child.props.hoverDisabled !== undefined? child.props.hoverDisabled : this.props.hoverDisabled,
 				key: child.key? child.key: (this.props.key + idx)
 			});
 		}, this);		

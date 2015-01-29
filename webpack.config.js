@@ -7,7 +7,7 @@ module.exports = function(options) {
 		//entry: ['./src/main.jsx'],
 		entry: {
 			'main-ng': './src/main-ng.js',
-			'main-react': './src/main.jsx'
+			'main-02': './src/main.jsx'
 		},
 		module: {
 			loaders: [

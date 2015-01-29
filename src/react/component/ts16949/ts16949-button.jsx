@@ -18,7 +18,7 @@ var Ts16949Btn = React.createClass({
 		var wording = this.state.view == Constants.DEFAULT_VIEW ?
 			'TS16949': 'INIP'
 		return (
-			<div className="menu-gray" title="TS16949" onClick={this.handleClick}>
+			<div className="menu-gray" title={wording} onClick={this.handleClick}>
 				{wording}
 			</div>
 		);

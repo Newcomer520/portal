@@ -1,66 +1,56 @@
 var process = {
 	name: 'SP7',
-	title: 'Production Management',
+	title: 'Purchasing & Supplier Management',
 	material: [		
- 		'ERP(SAP, MFG/Pro)',
-		'MPS/MRP',
-		'DSS (Demand vs Supply Simulation)',
-		'MES (Manufacturing Excellent System))',
-		'WMS/WH equipment (Forklift/trailer/Packing…etc)',
-		'(Warehouse Management System)'
+ 		{content: 'SRM', links: [{text:'EISS/MSPG', url:'http://tw.yahoo.com'}, {text:'Workplace-SRM', url:'http://tw.yahoo.com'}]},
+ 		{content: 'ERP', links: [{text:'EISS/MSPG', url:'http://tw.yahoo.com'}, {text:'Workplace-EP', url:'http://tw.yahoo.com'}, {text:'Mall', url:'http://tw.yahoo.com'}]},
+ 		{content: 'SRS', links: [{text:'QM/SIMP', url:'http://tw.yahoo.com'}]},
+		{content: 'PDM', links: [{text:'EISS/MSPG Workplace-PDM', url: '#'}]},
+		{content: 'SIMP', links: [{text:'M/SQE', url: '#'}, {text:'Workplace-SIMP02', url: '#'}]}
 	],
 	competence: [
-		'SCM/Material markets knowledge/concept',
-		'Production planning (MPS/WPS/DPS)',
-		'Well operation skill on support tooling or system',
-		'(SAP/MES/eMatrix/MRP/IDEA/Excel program and so on.)',
-		'Forklift/ chemical handling certification'
+		{content:'TS16949 / VDA System Audit Training', links:[{text:'QS/4.Audit/4.4.2.ISO/TS 16949',url:'#'}]},
+		{content: 'Certified auditor', links:[{text:'QM/QS(1)Workplace/Audit', url:'#'}]},
+		{content: 'Vendor management skill', links:[{text:'TBD', url:'#'}]}
 	], 
 	input: [		
-		'Demand forecast and order (COP2)',
-		'-Short term demand (12weeks )',
-		'-Long term demand forecast Supply commitment and delivery (S)',
-		'Incoming material (S)',
-		'Finished goods and semi-finished goods handling (include RMA) (C,COP5)',
-		'Samples (COP5)',
-		'BOM (COP4)',
-		'Customs declaration (G)',
-		'OEE(COP5B)',
-		'Competent employees (SP9)',
-		'-DL recruit plan',
-		'Customer Scorecard  & Analysis Report (COP6)'
+		{content:'Sourcing Strategy', links:[{text:'VSM', url: '#'}]},
+		{content:'Supplier QTR(QBR)', links:[{text:'SQE/1.供應商稽核', url: '#'}]},
+		{content:'Business Fulfillment and Commitment', links:[{text:'SRM/2.FCST Commit', url: '#'}]},
+		{content:'RFI(RFQ)', links:[{text:'SRM/1.Sourcing', url: '#'}]},
+		{content:'Proposed Suppliers', links:[{text:'TBD', url: '#'}]},
+		{content:'RFQ Key Components', links:[{text:'SRM/1.Sourcing', url: '#'}]},
+		{content:'Product Terminated', links:[{text:'TPS/3.(S)產品實現', url: '#'}]},
+		{content:'Result of ECRB', links:[{text:'TBD', url: '#'}]},
+		{content:'(Request for updated) AVL', links:[{text:'SRM/1.Sourcing', url: '#'}]}
 	],
 	output: [
-		'Business fulfillment and commitment (COP2,SP7)',
-		'Factory demand forecast/allocation & commitment (COP2)',
-		'Shipment execution and logistics (COP2)',
-		'Accepted BOM material &Auxiliary (COP5)',
-		'Capa. Plan/schedule  (COP5)',
-		'MPS & DPS (COP5)',
-		'Customs declaration forms and application (C)',
-		'Bonded operation and document shipment (C)',
-		'Investment planning (COP5B)',
-		'EQ move/release plan (COP5B)'
+		{content:'Approved Key Component Supplier', links:[{text:'SCM/2.供應商管理', url:'#'}]},
+		{content:'SRS Result', links:[{text:'SQE/5.供應商評比', url:'#'}]},
+		{content:'Key Supplier Roadmaps', links:[{text:'TBD', url:'#'}]},
+		{content:'PSL(Preferred  Supplier List)', links:[{text:'SCM/2.供應商管理', url:'#'},{text:'EQS/2.採購管理', url:'#'},{text:'MROS/2.採購管理', url:'#'}]}
 	],
 	methods: [
-		'6100P-001 Supplier Chain Management Procedure',
-		'II2OS-0004 Warehousing Management Procedure',
-		'6120P-001 Customer Order Handling Procedure  for MD BU MS products',
-		'II2OS-0005 物料管制作業系統Material Control Procedure',
-		'6110P-001  Sales Demand Planning Procedure – MD BU MS product apply',
-		'4420P-001 QUOTATION AND PRICE CHANGE PROCEDUR',
-		'6150P-002 Supplier capacity plan and allocation Procedure',
-		'6500P-001  Back-end procurement Procedure',
-		'6150P-004  Risk Order Management Procedure',
-		'5100P-001 Front End Production Planning System',
-		'6150P-001 Material Planning Procedure',
-		'6150P-003  Material Review Board Procedure'
+		'Material Supplier Management Procedure',
+		'Supplier Rating System Procedure',
+		'Supplier Development Collaboration',
+		'Supplier Chain Management Procedure',
+		'Supplier capacity plan and allocation Procedure',
+		'Supplier Quality Management Procedure',
+		'Supplier Selection Procedure'
 	],
 	performance: [
-		'CLIP (Conformed Line Item Performance) %',
-		'HUB stock (DOS)',
-		'Inventory turn over rate (turns)',
-		'Obsolesce ratio'
+		{content:'SRS (Supplier Rating System)', links:[{text:'SQE/5.供應商評比/5.1.SQPR', url:'#'}]},
+		{content:'AVL change rate', links:[{text:'SCM/2.供應商管理/2.1.8.供應商收斂 KPI', url:'#'}]},
+		{content: 'Suppler Quality KPI monitoring', links:[{text:'SQE/5.供應商評比/5.2.VPS', url:'#'}]}
+	],
+	center: [
+		{content: 'Material and Supplier Sourcing', links: [{text: 'VSM', url:'#'}]},
+		{content: 'Supplier Qualification', links: [{text: 'SRM', url:'#'},{text: 'EQS', url:'#'},{text: 'MROS', url:'#'}]},
+		{content: 'New Project Supplier & Supplier Chain Selection', links: [{text: 'SRM', url:'http://psam.cminl.oa/form/FRM_FA100_01.aspx?SYSID=M-ROOM'}]},
+		{content: 'SRS Rating', links: [{text: 'SQE', url:'http://psam.cminl.oa/form/FRM_FA100_01.aspx?SYSID=SQMR'}]},
+		{content: 'Supplier Monitoring Mechanism', links: [{text: 'SQE', url:'http://psam.cminl.oa/form/FRM_FA100_01.aspx?SYSID=SQMR'}]},
+		{content: 'Escalation/Issue Notification', links: [{text: 'TBD', url:'#'}], style: {'backgroundColor': '#ebebf2'}}
 	]
 }
 

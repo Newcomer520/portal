@@ -24,12 +24,22 @@ var Wrapper = React.createClass({
 					<div className="central-wrapper">
 						<div className="title">Process</div>
 						<div className="wrapper-inner">
+							{this.renderTitleImgs()}
 							{this.renderDetails()}
 						</div>
 					</div>
 				</div>
 			</div>
 		);
+	},
+	renderTitleImgs: function() {		
+		var name = this.props.name;
+		if(!name || !PROCESS_IMGS[name])
+			return null;		
+		var imgs = PROCESS_IMGS[name];
+		return imgs.map(function(img, idx) {
+			return <img key={this.props.name + '-center-img-' + idx} className="process-title-img" src={img} />
+		}, this);		
 	},
 	renderDetails: function() {
 		var data = this.props.data;
@@ -68,3 +78,8 @@ var Wrapper = React.createClass({
 });
 
 module.exports = Wrapper;
+
+
+var PROCESS_IMGS = {
+	SP7: [require('file!./images/sp7-title.png')]
+}

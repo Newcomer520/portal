@@ -3,7 +3,7 @@ var process = {
 	title: 'Human Resource',
 	material: [		
 		'SP9.1Organization information management  system(OIMS)',
-		{content:'SP9.2Recruiting system (manpower demand, aptitude test, etc.)', links:[{text:'INIP', url:'http://inip.local'}, {text:'Yahoo', url: 'http://tw.yahoo.com'}]},
+		'SP9.2Recruiting system (manpower demand, aptitude test, etc.)',
 		'SP9.3 Learning certification system(LCS)',
 		'SP9.4Performance management  system, promotion system',
 		'SP9.5Compensation system (SAP/Smooth)',
@@ -19,8 +19,8 @@ var process = {
 		'Auto business strategies  and functional objectives (MP1)',
 		'Organization‘s policies (MP1)',
 		'-Align organizational structure to delivery of strategy',
-		{content:'-Recruiting policies'},
-		{content: '-Promotion policies', links:[{text:'INIP', url:'http://inip.local'}, {text:'Yahoo', url: 'http://tw.yahoo.com'}]},
+		{content: '-Recruiting policies'},
+		{content: '-Promotion policies'},
 		'-Compensation & benefit policies',
 		'-Training Policies',
 		'-Employee Relation policies',
@@ -59,7 +59,7 @@ var process = {
 		{content: 'SP9.3 Training & Development', links: [{text: 'HRD', url: 'http://psam.cminl.oa/form/FRM_FA100_01.aspx?SYSID=LMS'}]},
 		{content: 'SP9.4 Performance Management', links: [{text: 'HRD', url: 'http://psam.cminl.oa/form/FRM_FA100_01.aspx?SYSID=LMS'}]},
 		{content: 'SP9.5 Compensation & Benefits', links: [{text: 'CBMS', url: 'http://psam.cminl.oa/form/FRM_FA100_01.aspx?SYSID=CBMS&IFELITE=Y'}]},
-		{content: 'SP9.6 Employee Relation', style:{'background-color': 'gray', 'border': '1px solid red'}, links: [{text: 'EC2', url: 'http://psam.cminl.oa/form/FRM_FA100_01.aspx?SYSID=ECS&IFELITE=Y'}]}
+		{content: 'SP9.6 Employee Relation', links: [{text: 'EC2', url: 'http://psam.cminl.oa/form/FRM_FA100_01.aspx?SYSID=ECS&IFELITE=Y'}]}
 	]
 }
 

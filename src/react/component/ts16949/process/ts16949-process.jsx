@@ -80,9 +80,10 @@ var Ts16949Process = React.createClass({
 						</div>
 					</div>
 					<div className="overview-widget" onClick={this.props.gotoOverview}>
-						<Surface width={130} height={60}>
+						<button className="btn btn-primary">Return</button>
+						{/*<Surface width={130} height={60}>
 							<OverviewWrapper scale={0.1} />
-						</Surface>
+						</Surface>*/}
 					</div>
 				</div>
 			</div>
@@ -90,9 +91,16 @@ var Ts16949Process = React.createClass({
 	},
 	renderUtil: function(item) {
 		var process = this.state.processData['name'];
-		var data = this.state.processData[item];		
+		var data = this.state.processData[item];
 		if(!data) {			
-			return null;
+			return (
+				<div className="box">
+					<div className="title"></div>
+					<div className="wrapper">
+						<ul></ul>
+					</div>
+				</div>
+			);
 		}
 			
 		var title = BOXES[item];
@@ -121,7 +129,7 @@ var Ts16949Process = React.createClass({
 							{this.renderItem(metaInfo)}
 							{/*<span style={metaInfo.style}>{metaInfo.content}</span>*/}
 						</li>
-					);				
+					);
 					i = i + 1;
 				}
 				
@@ -166,10 +174,12 @@ var Ts16949Process = React.createClass({
 	},
 	renderNavigator: function() {
 		var lis = PROCESSES.map(function(p, idx) {
+			var name = p;
 			var cls =cx({
-				current: p === this.state.processData.name
-			})
-			return <li  key={'ts16949-nav-' + idx}><span className={cls} onClick={this.switchProcess.bind(this, p)}>{p}</span></li>;
+				current: name === this.state.processData.name
+			});
+
+			return <li  key={'ts16949-nav-' + idx}><span className={cls} onClick={this.switchProcess.bind(this, name)}>{name}</span></li>;
 		}, this);
 		return <ul className="nav">{lis}</ul>;
 	}
@@ -188,7 +198,8 @@ var PROCESSES = [
 	'SP7',
 	'SP8',
 	'SP9',
-	'SP10'];
+	'SP10',
+	'SP11'];
 var BOXES = {
 	material: 'Material/Equipment',
 	competence: 'Competence/Training',
@@ -202,42 +213,4 @@ var LI = [
 	{key: '-', className: 'dash'},
 	{key: '!', className: 'double-dash'}
 ]
-/*
-var PROCESSES = {
-	'MP1': {
-		title: ''
-	},
-	'COP2': {
-		title: 'Business & KPI management process'
-	},
-	'COP3': {
-		title: ''
-	},
-	'COP4': {
-		title: ''
-	},
-	'COP5F': {
-		title: ''
-	},
-	'COP5B': {
-		title: ''
-	},
-	'COP6': {
-		title: ''
-	},
-	'SP7': {
-		title: ''
-	},
-	'SP8': {
-		title: ''
-	},
-	'SP9': {
-		title: ''
-	},
-	'SP10': {
-		title: ''
-	},
-	'SP11': {
-		title: ''
-	}
-}*/	
+

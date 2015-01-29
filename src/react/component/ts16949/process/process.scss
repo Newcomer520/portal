@@ -1,6 +1,9 @@
 @import "../../default-style.scss";
 
 $CentralWrapperPadding: 10px;
+$title-height: 20px;
+$process-title-img-height: 40px;
+
 .ts16949-process
 {
 	width: 100%;
@@ -98,17 +101,23 @@ $CentralWrapperPadding: 10px;
 					bottom: 10px;
 					left: 30px;
 					right: 20px;					
-					position: absolute;					
+					position: absolute;
+
 					div.wrapper-inner
 					{
 						position: absolute;
-						top: 20px;
+						top: $title-height;
 						bottom: 0px;
 						left: 0px;
 						right: 0px;
 						overflow-y: auto;
 						overflow-x: hidden;
 
+						img.process-title-img
+						{
+							width: 100%;
+							height: $process-title-img-height;
+						}
 						div.central-process
 						{
 							position: relative;
@@ -198,7 +207,7 @@ $CentralWrapperPadding: 10px;
 
 		.title
 		{
-			height: 20px;
+			height: $title-height;
 			color: black;
 			font-weight: bold;
 			text-decoration: underline;
@@ -276,7 +285,7 @@ $CentralWrapperPadding: 10px;
 				display: inline-block;
 				text-align: center;
 				
-				width: (100% / 11);
+				width: (100% / 12);
 
 				span 
 				{
@@ -315,24 +324,20 @@ $CentralWrapperPadding: 10px;
 
 .overview-widget
 {
-	background-color: white;	
+	/*background-color: white;*/
 	cursor: pointer;
 	position: absolute;
-	right: $padding;
-	padding: 3px;
-	bottom: 0px;
-	width: 105px;
-	inline-height: 30px;
-	height: 55px;	
-	border-radius:5px;
-	border: 1px solid black;
+	right: 20px;
+	/*padding: 3px;*/
+	bottom: 10px;
+	/*width: 80px;*/
+	/*inline-height: 25px;
+	height: 25px;*/
+	
+	
 	color: blue;
 	display: inline-block;
 	vertical-align: middle;
 	text-align: center;
-	border: 1px solid blue;
-	&:hover
-	{
-		border: 1px solid #db5bbb;
-	}
+		
 }

@@ -7,7 +7,7 @@ module.exports = function(options) {
 		context: path.join(__dirname, 'src'),
 		entry: {
 			'main-ng': './main-ng.js',
-			'main-react': './main.jsx'
+			'main-02': './main.jsx'
 		},
 		module: {
 			loaders: [

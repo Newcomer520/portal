@@ -30,7 +30,7 @@ var Wrapper = React.createClass({
 		return (
 			<MyGroup scale={scale}>
 			{/*row 0*/}
-				<LightBlueBox x={GRID[0][0].x} y={GRID[0][0].y} width={300} height={70} onClick={processFunc.bind(this,'MP1')}>					
+				<LightBlueBox x={GRID[0][0].x} y={GRID[0][0].y} width={300} height={70}>					
 						<Text font={font()} alignment="center" fill="#000" x={150} y={5}>Business and KPI</Text>
 						<Text font={font()} alignment="center" fill="#000" x={150} y={25}>management process</Text>
 						<Text font={font()} alignment="center" fill="#000" x={150} y={45}>(4.1, 5, 6.1, 8.4, 8.5)</Text>
@@ -53,89 +53,73 @@ var Wrapper = React.createClass({
 					<Shape scale={2.5} x={50} y={90} d="m 45,10 25,0" stroke="#000" strokeWidth={0.5} />
 					<Shape x={220} y={115} scaleX={0.8} rotation={-180} d={ARROW1} fill="#000"></Shape>
 
-					<LightBlueBox x={10} y={20} width={110} height={70} fill="#FF7F24" stroke="#fff" onClick={processFunc.bind(this,'COP2')}>
+					<LightBlueBox x={10} y={20} width={110} height={70} fill="#FF7F24" stroke="#fff">
 						<Text font={font(11)} alignment="center" fill="#000" x={55} y={5}>Sales and</Text>
 						<Text font={font(11)} alignment="center" fill="#000" x={55} y={20}>Marketing Process</Text>
 						<Text font={font(11)} alignment="center" fill="#000" x={55} y={35}>(5.2,5.5.2.1, 7.2,7.2.3,</Text>
 						<Text font={font(11)} alignment="center" fill="#000" x={55} y={50}>7.5.1.8)</Text>						
 						{this.renderTextBox('2',{fill:'blue', x:42, y:-27})}
 					</LightBlueBox>
-					<LightBlueBox x={160} y={20} width={100} height={70} fill="#FF7F24" stroke="#fff" onClick={processFunc.bind(this,'COP3')}>
+					<LightBlueBox x={160} y={20} width={100} height={70} fill="#FF7F24" stroke="#fff">
 						<Text font={font(11)} alignment="center" fill="#000" x={50} y={5}>Program</Text>
 						<Text font={font(11)} alignment="center" fill="#000" x={50} y={20}>Management</Text>
 						<Text font={font(11)} alignment="center" fill="#000" x={50} y={35}>Process</Text>
 						<Text font={font(11)} alignment="center" fill="#000" x={50} y={50}>(7.1, 7.2, 8.4.1)</Text>		
 						{this.renderTextBox('3',{fill:'blue', x:55, y:-27})}
 					</LightBlueBox>
-					<LightBlueBox x={290} y={20} width={100} height={70} fill="#FF7F24" stroke="#fff" onClick={processFunc.bind(this,'COP4')}>
+					<LightBlueBox x={290} y={20} width={100} height={70} fill="#FF7F24" stroke="#fff">
 						<Text font={font(11)} alignment="center" fill="#000" x={50} y={10}>R & D</Text>
 						<Text font={font(11)} alignment="center" fill="#000" x={50} y={25}>Process</Text>
 						<Text font={font(11)} alignment="center" fill="#000" x={50} y={40}>(7.3, 7.6.3, 8.4, 8.5)</Text>
 						{this.renderTextBox('4',{fill:'blue', x:42, y:-27})}
 					</LightBlueBox>
 
-					<LightBlueBox x={50} y={100} width={120} height={70} fill="#FF7F24" stroke="#fff" onClick={processFunc.bind(this,'COP5F')}>
-						<Group x={60} y={5}>
-							<Text font={font(11)} alignment="center" fill="#000" y={0}>Manufacturing</Text>
-							<Text font={font(11)} alignment="center" fill="#000" y={15}>Process</Text>
-							<Text font={font(11)} alignment="center" fill="#000" y={30}>(6.3, 6.4, 7.5, 7.6, 8.2.3,</Text>
-							<Text font={font(11)} alignment="center" fill="#000" y={45}>8.2.4, 8.3, 8.4, 8.5)</Text>
-						</Group>					
+					<LightBlueBox x={50} y={100} width={120} height={70} fill="#FF7F24" stroke="#fff">
+						<Text font={font(11)} alignment="center" fill="#000" x={60} y={5}>Manufacturing</Text>
+						<Text font={font(11)} alignment="center" fill="#000" x={60} y={20}>Process</Text>
+						<Text font={font(11)} alignment="center" fill="#000" x={60} y={35}>(6.3, 6.4, 7.5, 7.6, 8.2.3,</Text>
+						<Text font={font(11)} alignment="center" fill="#000" x={60} y={50}>8.2.4, 8.3, 8.4, 8.5)</Text>
 						{this.renderTextBox('5',{fill:'blue', x:100, y:71})}
 					</LightBlueBox>					
-					<LightBlueBox x={230} y={100} width={120} height={70} fill="#FF7F24" stroke="#fff" onClick={processFunc.bind(this,'COP6')}>
-						<Group x={60} y={5}>
-							<Text font={font(11)} alignment="center" fill="#000" y={0}>Customer</Text>
-							<Text font={font(11)} alignment="center" fill="#000" y={15}>Satisfaction Process</Text>
-							<Text font={font(11)} alignment="center" fill="#000" y={30}>(5.5.2.1, 7.5.1.7, 8.2.1,</Text>
-							<Text font={font(11)} alignment="center" fill="#000" y={45}>8.4, 8.5)</Text>
-						</Group>													
+					<LightBlueBox x={230} y={100} width={120} height={70} fill="#FF7F24" stroke="#fff">
+						<Text font={font(11)} alignment="center" fill="#000" x={60} y={5}>Customer</Text>
+						<Text font={font(11)} alignment="center" fill="#000" x={60} y={20}>Satisfaction Process</Text>
+						<Text font={font(11)} alignment="center" fill="#000" x={60} y={35}>(5.5.2.1, 7.5.1.7, 8.2.1,</Text>
+						<Text font={font(11)} alignment="center" fill="#000" x={60} y={50}>8.4, 8.5)</Text>
 						{this.renderTextBox('6',{fill:'blue', x:100, y:71})}
 					</LightBlueBox>					
 				</LightBlueBox>
 
 				<LightBlueBox x={GRID[1][2].x} y={GRID[1][2].y} width={200} height={180} hoverDisabled={true} mask={false}>
-					<Group x={100} y={70}>
-						<Text font={font(20)} alignment="center" fill="#000" y={0}>Customer</Text>
-						<Text font={font(20)} alignment="center" fill="#000" y={30}>Satisfaction</Text>
-					</Group>				
+					<Text font={font(20)} alignment="center" fill="#000" x={100} y={70}>Customer</Text>
+					<Text font={font(20)} alignment="center" fill="#000" x={100} y={100}>Satisfaction</Text>
 				</LightBlueBox>
 
 				<LightBlueBox x={GRID[2][0].x} y={GRID[2][0].y} width={800} height={120} hoverDisabled={true} radius={30}  mask={false}>
 					<LightBlueBox x={120} y={5} width={220} height={50} fill="#FFCC11" stroke="white" onClick={processFunc.bind(this,'SP7')}>
-						<Group x={110} y={10}>
-							<Text font={font(12)} alignment="center" fill="#000" y={0}>Purchasing & Supplier Management</Text>
-							<Text font={font(12)} alignment="center" fill="#000" y={20}>Process (7.4, 7.4.1, 7.4.2)</Text>
-						</Group>
+						<Text font={font(12)} alignment="center" fill="#000" x={110} y={10}>Purchasing & Supplier Management</Text>
+						<Text font={font(12)} alignment="center" fill="#000" x={110} y={30}>Process (7.4, 7.4.1, 7.4.2)</Text>
 						{this.renderTextBox('7',{fill:'#bf0000', x:3, y:22})}
 					</LightBlueBox>
 					<LightBlueBox x={120 + 220 + 20} y={5} width={220} height={50} fill="#FFCC11" stroke="white" onClick={processFunc.bind(this,'SP8')}>
-						<Group x={110} y={10}>
-							<Text font={font(12)} alignment="center" fill="#000" y={0}>Production Management</Text>
-							<Text font={font(12)} alignment="center" fill="#000" y={20}>Process (7.5.1.6, 7.5.5)</Text>
-						</Group>
+						<Text font={font(12)} alignment="center" fill="#000" x={110} y={10}>Production Management</Text>
+						<Text font={font(12)} alignment="center" fill="#000" x={110} y={30}>Process (7.5.1.6, 7.5.5)</Text>
 						{this.renderTextBox('8',{fill:'#bf0000', x:3, y:22})}
 					</LightBlueBox>
 					<LightBlueBox x={120 +220*2 + 20*2} y={5} width={150} height={50} fill="#FFCC11" stroke="white" onClick={processFunc.bind(this,'SP9')}>
-						<Group x={75} y={10}>
-							<Text font={font(12)} alignment="center" fill="#000" y={0}>Human Resource</Text>
-							<Text font={font(12)} alignment="center" fill="#000" y={20}>Process (6.2)</Text>
-						</Group>
+						<Text font={font(12)} alignment="center" fill="#000" x={75} y={10}>Human Resource</Text>
+						<Text font={font(12)} alignment="center" fill="#000" x={75} y={30}>Process (6.2)</Text>
 						{this.renderTextBox('9',{fill:'#bf0000', x:3, y:22})}
 					</LightBlueBox>
 				{/*2nd row*/}
-					<LightBlueBox x={100} y={55+5} width={300} height={50} fill="#FFCC11" stroke="white" onClick={processFunc.bind(this,'SP10')}>
-						<Group x={150} y={10}>
-							<Text font={font(12)} alignment="center" fill="#000" y={0}>IT System Management</Text>
-							<Text font={font(12)} alignment="center" fill="#000" y={20}>Process (6.3)</Text>
-						</Group>
+					<LightBlueBox x={100} y={55+5} width={300} height={50} fill="#FFCC11" stroke="white">
+						<Text font={font(12)} alignment="center" fill="#000" x={150} y={10}>IT System Management</Text>
+						<Text font={font(12)} alignment="center" fill="#000" x={150} y={30}>Process (6.3)</Text>
 						{this.renderTextBox('10',{fill:'#bf0000', x:3, y:22})}
 					</LightBlueBox>
-					<LightBlueBox x={100+300+20} y={55+5} width={300} height={50} fill="#FFCC11" stroke="white" onClick={processFunc.bind(this,'SP11')}>
-						<Group x={150} y={10}>
-							<Text font={font(12)} alignment="center" fill="#000" y={0}>Quality Management Process</Text>
-							<Text font={font(12)} alignment="center" fill="#000" y={20}>(4.2, 5, 7.4.3, 8.1, 8.2, 8.4, 8.5)</Text>
-						</Group>
+					<LightBlueBox x={100+300+20} y={55+5} width={300} height={50} fill="#FFCC11" stroke="white">
+						<Text font={font(12)} alignment="center" fill="#000" x={150} y={10}>Quality Management Process</Text>
+						<Text font={font(12)} alignment="center" fill="#000" x={150} y={30}>(4.2, 5, 7.4.3, 8.1, 8.2, 8.4, 8.5)</Text>
 						{this.renderTextBox('11',{fill:'#bf0000', x:3, y:22})}
 					</LightBlueBox>					
 				</LightBlueBox>
